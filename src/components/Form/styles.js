@@ -4,10 +4,6 @@ const styles = {
         color: "#4a4a4a",
         marginBottom: 8
     },
-    
-    /* .Form {
-	transform: scale(1.1),
-} */
 
     form__Input: {
         border: "1px solid #d2d2d2",
@@ -22,7 +18,7 @@ const styles = {
         width: 260
     }
     
-    // Form__Input:active {
+    // form__Input:active {
     //     border-color: #53ae30,
     // }
     

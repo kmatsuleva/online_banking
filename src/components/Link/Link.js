@@ -1,9 +1,8 @@
 import React from "react";
-import styles from './styles'
+import styles from "./styles.js";
 
 const Link = ({ text }) => (
-        <a href="#" style={styles.link}> {text} </a>
-)
-    
+  <a href="#" style={styles.link}> { text } </a>
+);
 
 export default Link;

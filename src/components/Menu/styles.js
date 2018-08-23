@@ -1,14 +1,19 @@
 const styles = {
     ul: {
         backgroundColor: "#f4f4f4",
-        paddingTop: 30,
-        paddingBottom: 10,
+        paddingTop: 15,
+        paddingBottom: 15,
+        paddingLeft: 15,
         margin: 0,
         alignItems: "center",
-        marginLeft: 50,
         verticalAlign: "baseline",
-        display: "inline"
+        display: "flex",
+        listStyleType: "none"
+    },
+    
+    li: {
+        flexDirection: "row"
     }
 }
 
-export default styles;
+export default styles

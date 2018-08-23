@@ -1,19 +1,17 @@
 import React from "react";
-import MenuItem from "../MenuItem/MenuItem";
+import styles from "./styles.js";
+import Link from "../Link/Link"
 import Logo from "../Logo/Logo"
-import styles from "./styles.js"
 
 const Menu = () => (
-  <ul style={styles.ul}>
-    <li style={styles.li}> 
-          <Logo src={require('../../images/icon.png')} />
-    </li>
-    <MenuItem text = "individual clients" />
-    <MenuItem text = "corporate clients" />
-    <MenuItem text = "contacts" />
-    <MenuItem text = "about us" />
-    <MenuItem text = "online banking" />
-  </ul>
+    <ul style={styles.ul}>
+        <li><Logo src={require('../../images/logo.png')} /> </li>
+        <li style={styles.li}><Link text = "individual clients"/></li>
+        <li style={styles.li}><Link text = "corporate clients"/></li>
+        <li style={styles.li}><Link text = "contacts"/></li>
+        <li style={styles.li}><Link text = "about us"/></li>
+        <li style={styles.li}><Link text = "online banking"/></li>
+    </ul>
 );
 
 export default Menu;
