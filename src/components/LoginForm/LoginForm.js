@@ -1,23 +1,26 @@
 import React from "react";
 import styles from "./styles.js";
-import Form from "../Form/Form";
+import Label from "../Label/Label"
+import Input from "../Input/Input"
 import Button from "../Button/Button"
 import RequiredField from "../RequiredField/RequiredField"
 
 const LoginForm = () => (
     <div style={styles.form}>
-        <Form 
-            label="User: "
+        <Label
+            labelValue="User: "
         />
         <RequiredField
             text = "*"
         />
-        <Form 
-            label="Password: " 
+        <Input />
+        <Label
+            labelValue="Password: " 
         />
         <RequiredField 
             text = "*"
         />
+        <Input />
         <Button 
             btnValue="Sign in"
         />
