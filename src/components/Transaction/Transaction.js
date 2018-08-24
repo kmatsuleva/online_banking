@@ -8,13 +8,15 @@ import styles from "./styles.js"
 
 
 const Transaction = () => (
-    <div style={styles.container}>
+    <div>
         <TransactionMenu />
-        <DropdownAccounts />
-        <FromToDate />
-        <DropdownTypes />
-        <div style={styles.button}>
-            <Button btnValue = "Show" />
+            <div style={styles.container}>
+            <DropdownAccounts />
+            <FromToDate />
+            <DropdownTypes />
+            <div style={styles.button}>
+                <Button btnValue = "Show" />
+            </div>
         </div>
     </div>
 );
