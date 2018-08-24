@@ -1,6 +1,13 @@
 const styles = {
     form: {
-        width: "40%",
+        width: "25%",
+        boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+        transition: "0.3s",
+        borderRadius: 5,
+        paddingLeft: 30,
+        marginRight: 110,
+        paddingTop: 100,
+        paddingBottom: 25
     },
     
     flexContainer: {

@@ -1,8 +1,8 @@
 import React from "react";
 import Menu from "../Menu/Menu";
 import styles from "./styles.js";
-import LoginForm from "../LoginForm/LoginForm";
 import HomeImage from "../HomeImage/HomeImage";
+import LoginForm from "../LoginForm/LoginForm";
 
 const HomePage = () => (
   <div>

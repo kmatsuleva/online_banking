@@ -1,11 +1,10 @@
 const styles = {
     homePageImg: {
-        width: "60%"
+        width: "75%"
     },
     
     img: {
-        width: "90%",
-        height: "90%",
+        width: 825,
         paddingLeft: 20
     }
 };
