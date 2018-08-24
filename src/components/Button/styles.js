@@ -1,7 +1,7 @@
 const styles = {
     button: {
         color: "white",
-        backgroundColor: "#398543",
+        backgroundColor: "#46568e",
         boxShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
         height: 40,
         marginTop: 10,
@@ -10,7 +10,8 @@ const styles = {
         paddingBottom: 8,
         paddingLeft: 20,
         paddingRight: 20,
-        fontSize: 15
+        fontSize: 16,
+       fontFamily: "Roboto, Arial, sans-serif"
     }
 
 };

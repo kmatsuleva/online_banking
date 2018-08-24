@@ -7,19 +7,23 @@ import RequiredField from "../RequiredField/RequiredField"
 
 const LoginForm = () => (
     <div style={styles.form}>
-        <Label
-            labelValue="User: "
-        />
-        <RequiredField
-            text = "*"
-        />
+        <div style={styles.flexContainer}>
+            <Label
+                labelValue="User: "
+            />
+            <RequiredField
+                text = "*"
+            />
+        </div>
         <Input />
-        <Label
-            labelValue="Password: " 
-        />
-        <RequiredField 
-            text = "*"
-        />
+        <div style={styles.flexContainer}>
+            <Label
+                labelValue="Password: " 
+            />
+            <RequiredField 
+                text = "*"
+            />
+        </div>
         <Input />
         <Button 
             btnValue="Sign in"

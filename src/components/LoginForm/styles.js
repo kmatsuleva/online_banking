@@ -1,7 +1,11 @@
 const styles = {
     form: {
-        /*background-color: #f4f4f4;*/
-        width: "35%"
+        width: "40%",
+    },
+
+    flexContainer: {
+        display: "flex",
+        alignContent: "flex-start"
     }
 }
 

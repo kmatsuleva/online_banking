@@ -3,7 +3,7 @@ import styles from "./styles.js"
 
 const Input = () => (
   <div>
-      <input style={styles.input} />
+      <input type="text" style={styles.input} />
   </div>
 );
 

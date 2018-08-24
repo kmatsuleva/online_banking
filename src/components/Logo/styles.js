@@ -1,11 +1,10 @@
 const styles = {
     logo: {
-        vertivalalign: "baseline",
-        display: "inline"
+        vertivalalign: "baseline"
     },
 
     image: {
-        width: 300
+        width: 250
     }
 };
 

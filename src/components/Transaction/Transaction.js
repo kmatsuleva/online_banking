@@ -1,23 +1,24 @@
 import React from "react";
 import TransactionMenu from '../TransactionMenu/TransactionMenu';
 import Label from "../Label/Label";
-import InputDate from '../InputTypeDate/InputDate'
+import DropAccountsList from "../DropAccountsList/DropAccountsList"
+import FromToDate from '../FromToDate/FromToDate'
 import Button from "../Button/Button";
-
+import DropTypesList from "../DropTypesList/DropTypesList"
+import styles from "./styles.js"
 
 
 const Transaction = () => (
-    <div>
+    <div style={styles.container}>
         <TransactionMenu />
         <Label labelValue = "Account:"/>
-        <Label labelValue = "From:"/>
-        <InputDate />
-        <Label labelValue = "To:"/>
-        <InputDate />
+        <DropAccountsList />
+        <FromToDate />
         <Label labelValue = "Type:"/>
- 
+        <DropTypesList />
         <Button btnValue = "Show" />
     </div>
 );
 
 export default Transaction;
+ 
