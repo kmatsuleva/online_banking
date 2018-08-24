@@ -5,9 +5,9 @@ const styles = {
         transition: "0.3s",
         borderRadius: 5,
         paddingLeft: 30,
-        marginRight: 110,
-        paddingTop: 100,
-        paddingBottom: 25
+        marginRight: 115,
+        paddingTop: 35,
+        paddingBottom: 30
     },
     
     flexContainer: {

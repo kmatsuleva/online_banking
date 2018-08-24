@@ -4,7 +4,7 @@ const styles = {
     },
     
     img: {
-        width: 825,
+        width: 820,
         paddingLeft: 20
     }
 };

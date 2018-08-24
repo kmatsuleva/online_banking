@@ -2,7 +2,7 @@ import React from "react";
 import DropDownItem from "../DropdownItem/DropdownItem";
 import styles from "./styles"
 
-const types = ["all", "Debits", "Credits"];
+const types = ["all", "Debits", "Withdrawals"];
 
 const DropTypesList = () => (
     <div style = {styles.container}>
