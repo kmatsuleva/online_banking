@@ -1,7 +1,7 @@
-// const styles = {
-//     contsiner: {
-//         display: "flex"
-//     }
-// }
+const styles = {
+    button: {
+        paddingLeft: 30
+    }
+}
 
-// export default styles
+export default styles

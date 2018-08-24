@@ -2,7 +2,11 @@ const styles = {
     container: {
         display: "flex",
         alignContent: "flex-start",
-        alignItems: "baseline"
+        alignItems: "baseline",
+    },
+
+    label: {
+        padding: "0 30px"
     }
 }
 

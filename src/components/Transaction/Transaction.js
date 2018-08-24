@@ -1,22 +1,21 @@
 import React from "react";
 import TransactionMenu from '../TransactionMenu/TransactionMenu';
-import Label from "../Label/Label";
-import DropAccountsList from "../DropAccountsList/DropAccountsList"
+import DropdownAccounts from "../DropdownAccounts/DropdownAccounts"
 import FromToDate from '../FromToDate/FromToDate'
 import Button from "../Button/Button";
-import DropTypesList from "../DropTypesList/DropTypesList"
+import DropdownTypes from "../DropdownTypes/DropdownTypes"
 import styles from "./styles.js"
 
 
 const Transaction = () => (
     <div style={styles.container}>
         <TransactionMenu />
-        <Label labelValue = "Account:"/>
-        <DropAccountsList />
+        <DropdownAccounts />
         <FromToDate />
-        <Label labelValue = "Type:"/>
-        <DropTypesList />
-        <Button btnValue = "Show" />
+        <DropdownTypes />
+        <div style={styles.button}>
+            <Button btnValue = "Show" />
+        </div>
     </div>
 );
 

@@ -5,9 +5,9 @@ import styles from "./styles"
 
 const FromToDate = () => (
         <form style={styles.container}>
-                <Label labelValue = "From:"/>
+                <div style={styles.label}><Label labelValue = "From:"/></div>
                 <InputDate />
-                <Label labelValue = "To:"/>
+                <div style={styles.label}><Label labelValue = "To:"/></div>
                 <InputDate />
         </form>
 );
