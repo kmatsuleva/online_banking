@@ -8,12 +8,7 @@ const listItem = ["accounts", "transactions", "deposits", "contacts", "settings"
 const TransactionMenu = () => (
     <ul style={styles.ul}>
         <li><Logo src={require('../../images/logo.png')} /> </li>
-        <li style={styles.li}><Link text = "accounts"/></li>        
-        <li style={styles.li}><Link text = "transactions"/></li>
-        <li style={styles.li}><Link text = "deposits"/></li>
-        <li style={styles.li}><Link text = "contacts"/></li>
-        <li style={styles.li}><Link text = "settings"/></li>
-        <li style={styles.li}><Link text = "log out"/></li>
+        <Link href="#" links = {listItem}/>
     </ul>
 );
 

@@ -4,12 +4,11 @@ import Label from "../Label/Label"
 import Input from "../Input/Input"
 import Button from "../Button/Button"
 import RequiredField from "../RequiredField/RequiredField"
-// import GreetingHomePage from "../GreetingHomePage/GreetingHomePage"
+import InputTypePassword from "../InputTypePassword/InputTypePassword.js"
 
 const LoginForm = () => (
     <div style={styles.form}>
         <div style={styles.flexContainer}>
-            {/* <GreetingHomePage text= "Hello"/> */}
             <Label
                 labelValue="User: "
             />
@@ -26,7 +25,7 @@ const LoginForm = () => (
                 text = "*"
             />
         </div>
-        <Input />
+        <InputTypePassword />
         <Button 
             btnValue="Sign in"
         />

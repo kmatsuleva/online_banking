@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "./styles.js";
 
-const Link = ({ text }) => (
-  <a href="#" style={styles.link}> { text } </a>
+const Link = ({ href, links }) => (
+  <li>
+    {links.map(text => {
+      return  <a href={href} style={styles.link}> { text } </a>
+    })}
+  </li>
 );
 
 export default Link;
