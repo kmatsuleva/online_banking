@@ -7,7 +7,8 @@ const styles = {
         paddingLeft: 30,
         marginRight: 115,
         paddingTop: 35,
-        paddingBottom: 30
+        paddingBottom: 30,
+        backgroundColor: "#f4f4f4"
     },
     
     flexContainer: {
