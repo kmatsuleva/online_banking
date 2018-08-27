@@ -1,9 +1,8 @@
 import React from "react";
-import styles from "../Input/styles"
 
-const InputTypePassword = () => (
+const InputTypePassword = ( {style} ) => (
   <div>
-      <input type="password" style={styles.input} />
+      <input type="password" style={style} />
   </div>
 );
 

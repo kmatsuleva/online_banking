@@ -9,15 +9,15 @@ import styles from "./styles";
 const LoginForm = () => (
     <div style={styles.form}>
         <div style={styles.flexContainer}>
-            <Label labelValue="User: " />
+            <Label labelValue="User: " style={styles.label}/>
             <RequiredField text = "*" />
         </div>
-        <Input />
+        <Input style={styles.input}/>
         <div style={styles.flexContainer}>
-            <Label labelValue="Password: "/>
+            <Label labelValue="Password: " style={styles.label}/>
             <RequiredField text = "*"/>
         </div>
-        <InputTypePassword />
+        <InputTypePassword style={styles.inputPsw}/>
         <Button 
             btnValue="Sign in"
         />

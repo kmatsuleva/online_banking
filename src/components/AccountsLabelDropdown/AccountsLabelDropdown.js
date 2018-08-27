@@ -4,11 +4,11 @@ import AccountsListDropdown from "../AccountsListDropdown/AccountsListDropdown"
 import styles from "../FromToDate/styles.js"
 
 
-const DropdownAccounts = () => (
+const AccountLabelDropdown = () => (
     <div style={styles.container}>
         <div style={styles.label}><Label labelValue = "Account:"/></div>
         <AccountsListDropdown />
     </div>
 );
 
-export default DropdownAccounts;  
+export default AccountLabelDropdown;  

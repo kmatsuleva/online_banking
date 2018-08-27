@@ -1,8 +1,7 @@
-import React from "react";
-import styles from "./styles.js"
+import React from "react"
 
-const Label = ({ labelValue }) => (
-      <label style={styles.label} > {labelValue} </label>
+const Label = ({ labelValue, style }) => (
+      <label style={style} > {labelValue} </label>
 );
 
 export default Label;

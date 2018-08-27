@@ -5,7 +5,7 @@ const styles = {
         padding: "22px 15px 22px 47px",
         textTransform: "uppercase",
         color: "#585858",
-        textDecoration: "none",
+        textDecoration: "none"
    }
 }
 

@@ -1,9 +1,8 @@
 import React from "react";
-import styles from "./styles.js"
 
-const Input = () => (
+const Input = ( {style} ) => (
   <div>
-      <input type="text" style={styles.input} />
+      <input type="text" style={style} />
   </div>
 );
 

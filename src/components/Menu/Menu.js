@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles.js";
+import styles from "./styles";
 import Link from "../Link/Link"
 import Logo from "../Logo/Logo"
 
@@ -8,7 +8,7 @@ const text = ["individual clients", "corporate clients", "contacts", "about us",
 const Menu = () => (
     <ul style={styles.ul}>
         <li><Logo src={require('../../images/logo.png')} /> </li>
-        <Link to="#" links = {text}/>
+        <Link to="#" links = {text} style={styles.link}/>
     </ul>
 );
 
