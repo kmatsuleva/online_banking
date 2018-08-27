@@ -8,19 +8,15 @@ import styles from "./styles";
 
 const LoginForm = () => (
     <div style={styles.form}>
-        <div style={styles.flexContainer}>
             <Label labelValue="User: " style={styles.label}/>
             <RequiredField text = "*" />
-        </div>
-        <Input style={styles.input}/>
-        <div style={styles.flexContainer}>
+            <Input style={styles.input}/>
             <Label labelValue="Password: " style={styles.label}/>
             <RequiredField text = "*"/>
-        </div>
-        <InputTypePassword style={styles.inputPsw}/>
-        <Button 
-            btnValue="Sign in"
-        />
+            <InputTypePassword style={styles.input}/>
+            <Button 
+                btnValue="Sign in"
+            />
     </div>
 );
 

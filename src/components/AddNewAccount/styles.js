@@ -1,14 +1,12 @@
 const styles = {
     wrapper: {
-        paddingTop: 30,
+        paddingTop: 60,
         display: "flex",
-        alignItems: "center",
         flexDirection: "column",
-        alignContent: "flex-start"
+        paddingLeft: 400
     },
 
     flexContainer: {
-        display: "flex",
         alignItems: "baseline"
     },
 
