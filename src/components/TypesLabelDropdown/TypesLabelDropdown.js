@@ -1,15 +1,15 @@
 import React from "react";
 import Label from "../Label/Label";
-import DropTypesList from "../DropTypesList/DropTypesList"
+import TypesListDropdown from "../TypesListDropdown/TypesListDropdown"
 import styles from "../FromToDate/styles.js"
 
 
-const Transaction = () => (
+const DropdownTypes = () => (
     <div style={styles.container}>
         <div style={styles.label}><Label labelValue = "Type:"/></div>
-        <DropTypesList />
+        <TypesListDropdown />
     </div>
 );
 
-export default Transaction;
+export default DropdownTypes;
  

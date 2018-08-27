@@ -4,11 +4,11 @@ import styles from "./styles"
 
 const types = ["all", "Debits", "Withdrawals"];
 
-const DropTypesList = () => (
+const TypesListDropdown = () => (
     <div style = {styles.container}>
         <DropDownItem items={types}/>
     </div>
 );
 
 
-export default DropTypesList;
+export default TypesListDropdown;

@@ -1,19 +1,19 @@
 import React from "react";
-import TransactionMenu from '../TransactionMenu/TransactionMenu';
-import DropdownAccounts from "../DropdownAccounts/DropdownAccounts"
+import OnlineBankingMenu from '../OnlineBankingMenu/OnlineBankingMenu';
+import AccountsLabelDropdown from "../AccountsLabelDropdown/AccountsLabelDropdown"
 import FromToDate from '../FromToDate/FromToDate'
 import Button from "../Button/Button";
-import DropdownTypes from "../DropdownTypes/DropdownTypes"
+import TypesLabelDropdown from "../TypesLabelDropdown/TypesLabelDropdown"
 import styles from "./styles.js"
 import Table from "../Table/Table"
 
 const Transaction = () => (
     <div>
-        <TransactionMenu />
+        <OnlineBankingMenu />
             <div style={styles.container}>
-                <DropdownAccounts />
+                <AccountsLabelDropdown />
                 <FromToDate />
-                <DropdownTypes />
+                <TypesLabelDropdown />
                 <div style={styles.button}>
                     <Button btnValue = "Show" />
                 </div>

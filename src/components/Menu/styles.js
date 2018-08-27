@@ -9,10 +9,6 @@ const styles = {
         verticalAlign: "baseline",
         display: "flex",
         listStyleType: "none"
-    },
-    
-    li: {
-        flexDirection: "row"
     }
 }
 

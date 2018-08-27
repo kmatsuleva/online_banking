@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./styles.js";
 
-const Link = ({ href, links }) => (
+const Link = ({ to, links }) => (
   <li>
     {links.map(text => {
-      return  <a href={href} style={styles.link}> { text } </a>
+      return  <a href={to} style={styles.link}> { text } </a>
     })}
   </li>
 );
