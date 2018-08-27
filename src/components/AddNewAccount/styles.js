@@ -1,6 +1,10 @@
 const styles = {
     wrapper: {
-        padding: "30px 45px"
+        paddingTop: 30,
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+        alignContent: "flex-start"
     },
 
     flexContainer: {
@@ -30,7 +34,7 @@ const styles = {
     },
 
     button: {
-        paddingLeft: 200
+        paddingLeft: 515
     }
 }
 

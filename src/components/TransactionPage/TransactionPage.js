@@ -11,7 +11,7 @@ const Transaction = () => (
     <div>
         <OnlineBankingMenu />
             <div style={styles.container}>
-                <AccountsLabelDropdown />
+               <AccountsLabelDropdown />
                 <FromToDate />
                 <TypesLabelDropdown />
                 <div style={styles.button}>

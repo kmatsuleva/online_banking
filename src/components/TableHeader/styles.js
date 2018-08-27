@@ -6,7 +6,7 @@ const styles = {
         borderBottom: "1px solid #ddd",
         color: "#15517d",
         fontFamily: "Roboto, Arial, sans-serif",
-        fontSize: 18,
+        fontSize: 19,
         fontWeight: "normal"
     }
 

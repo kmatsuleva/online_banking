@@ -4,7 +4,7 @@ const styles = {
         padding: 12,
         textAlign: "center",
         fontFamily: "Roboto, Arial, sans-serif",
-        fontSize: 15
+        fontSize: 16
     }
 
 }

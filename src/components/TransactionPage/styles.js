@@ -3,7 +3,7 @@ const styles = {
         display: "flex",
         alignContent: "flex-start",
         alignItems: "baseline",
-        padding: "30px 45px"
+        padding: "40px 60px"
     },
 
     button: {
