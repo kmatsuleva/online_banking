@@ -32,6 +32,7 @@ const styles = {
     },
 
     button: {
+        flexDirection: "column",
         paddingLeft: 515
     }
 }

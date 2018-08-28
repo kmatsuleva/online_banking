@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from "./components/HomePage/HomePage";
-import Transaction from "./components/Transaction/Transaction";
-import Accounts from "./components/Accounts/Accounts";
+import TransactionPage from "./components/TransactionPage/TransactionPage";
+import AccountsPage from "./components/AccountsPage/AccountsPage";
 
 class App extends Component {
   render() {
@@ -11,8 +11,8 @@ class App extends Component {
         <div>
           <Switch>
             <Route path="/" component={HomePage} exact />
-            <Route path="/transaction" component={Transaction} />
-            <Route path="/accounts" component={Accounts} />          
+            <Route path="/transaction" component={TransactionPage} />
+            <Route path="/accounts" component={AccountsPage} />          
           </Switch>
         </div>
       </BrowserRouter>
