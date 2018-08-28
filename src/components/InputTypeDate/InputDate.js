@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./styles"
 
-const InputDate = () => (
-      <input type="date" min="2013-12-31"
+const InputDate = ( {min} ) => (
+      <input type="date" min={min}
             style = {styles.inputDate}/>
 );
 

@@ -29,7 +29,8 @@ const styles = {
     },
 
     button: {
-        paddingLeft: 30
+        display: "flex",
+        justifyContent: "flex-end"
     },
 
     container: {

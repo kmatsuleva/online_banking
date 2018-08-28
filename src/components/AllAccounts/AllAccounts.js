@@ -3,7 +3,7 @@ import TableHeader from "../TableHeader/TableHeader"
 import TableData from "../TableData/TableData"
 
 const headers = ["account", "balance"];
-const td = ["djbjkvbjkfbvkbdfkbvkjdfbkjdbfkjbfjvd", "676"]
+const td = ["BG56BUIN65431544786321", "676"]
 
 const AllAccounts = () => (
     <table>
