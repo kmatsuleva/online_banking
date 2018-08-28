@@ -1,6 +1,6 @@
 const styles = {
     allAccounts: {
-        paddingTop: 50,
+        paddingTop: 42,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

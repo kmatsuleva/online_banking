@@ -2,8 +2,8 @@ import React from "react"
 import TableHeader from "../TableHeader/TableHeader"
 import TableData from "../TableData/TableData"
 
-const headers = ["account", "balance", "currency"];
-const td = ["djbjkvbjkfbvkbdfkbvkjdfbkjdbfkjbfjvd", "676", "EUR"]
+const headers = ["account", "balance"];
+const td = ["djbjkvbjkfbvkbdfkbvkjdfbkjdbfkjbfjvd", "676"]
 
 const AllAccounts = () => (
     <table>
