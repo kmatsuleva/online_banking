@@ -2,11 +2,11 @@ import React from "react";
 import DropDownItem from "../DropdownItem/DropdownItem";
 import styles from "./styles"
 
-const types = ["all", "Debits", "Withdrawals"];
+const operation = ["All", "Debosit", "Withdrawal"];
 
 const TypesListDropdown = () => (
     <div style = {styles.container}>
-        <DropDownItem items={types}/>
+        <DropDownItem items={operation}/>
     </div>
 );
 

@@ -3,7 +3,7 @@ import TableHeader from "../TableHeader/TableHeader"
 import TableData from "../TableData/TableData"
 import styles from "./styles"
 
-const headers = [ "date", "payments", "receipts", "type"];
+const headers = [ "date and time", "account", "operation", "amount"];
 const items = ["test1", "test2", "test3", "test4"];
 
 const Table = () => (

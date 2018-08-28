@@ -2,8 +2,9 @@ const styles = {
     container: {
         display: "flex",
         alignContent: "flex-start",
+        justifyContent: "center",
         alignItems: "baseline",
-        padding: "40px 60px"
+        paddingTop: 30
     },
 
     button: {
@@ -13,7 +14,8 @@ const styles = {
     table: {
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        paddingTop: 50
     }
 }
 

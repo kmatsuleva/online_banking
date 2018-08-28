@@ -1,13 +1,22 @@
 const styles = {
-    wrapper: {
-        paddingTop: 60,
+    container: {
         display: "flex",
-        flexDirection: "column",
-        paddingLeft: 400
+        alignContent: "flex-start",
+        justifyContent: "center",
+        alignItems: "baseline",
+        paddingTop: 30
     },
 
-    flexContainer: {
-        alignItems: "baseline"
+    label: {
+        fontSize: 18,
+        color: "#15517d",
+        fontFamily: "Roboto, Arial, sans-serif",
+        marginBottom: 8,
+        padding: "0 30px"
+    },
+
+    button: {
+        paddingLeft: 30
     },
 
     input: {
@@ -20,20 +29,7 @@ const styles = {
         fontSize: 18,
         color: "#4a4a4a",
         boxShadow: "inset 1px 1px 2px rgba(0, 0, 0, 0.2)",
-        width: 450
-    },
-
-    label: {
-        fontSize: 18,
-        color: "#15517d",
-        fontFamily: "Roboto, Arial, sans-serif",
-        marginBottom: 8,
-        padding: "0 30px"
-    },
-
-    button: {
-        flexDirection: "column",
-        paddingLeft: 515
+        width: 260
     }
 }
 
