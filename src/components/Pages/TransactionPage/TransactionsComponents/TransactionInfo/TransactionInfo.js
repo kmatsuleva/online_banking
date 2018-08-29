@@ -6,7 +6,7 @@ import styles from "./styles"
 const headers = [ "date and time", "account", "operation", "amount"];
 const items = ["test1", "test2", "test3", "test4"];
 
-const Table = () => (
+const TransactionInfo = () => (
     <table style={styles.table}>
         <TableHeader items = {headers} />
         <TableData items = {items}/>
@@ -18,5 +18,5 @@ const Table = () => (
     </table>
 );
 
-export default Table;
+export default TransactionInfo;
  

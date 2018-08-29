@@ -5,7 +5,7 @@ import styles from "../FromToDate/styles.js"
 
 const DropdownTypes = () => (
     <div style={styles.container}>
-        <label style={styles.label}>"Operation:</label>
+        <label style={styles.label}>Operation:</label>
         <TypesListDropdown />
     </div>
 );
