@@ -1,15 +1,14 @@
 import React from "react"
-import TableHeader from "../../../../Common/TableHeader/TableHeader"
-import TableData from "../../../../Common/TableData/TableData"
+import AccountInfo from "../AccountInfo/AccountInfo"
 
-const headers = ["account", "balance"];
-const td = ["BG56BUIN65431544786321", "676 EUR"]
 
 const AllAccounts = () => (
-    <table>
-        <TableHeader items = {headers} />
-        <TableData items = {td} />
-    </table>
+    <div>
+        <AccountInfo />
+        <AccountInfo />
+        <AccountInfo />
+    </div>
 );
 
 export default AllAccounts;
+
