@@ -1,17 +1,11 @@
 import React from "react"
 import styles from "./styles";
 
-const AllAccounts = () => (
+const AccountInfo = () => (
     <div style={styles.wrapper}>
-        <div style={styles.wrapper1}>
-        <img 
-                src={require('../../../../../icons/money.png')}
-                alt = "money" />
-        </div>
-        <div style={styles.wrapper2}>568 BGN</div>
-        <div style={styles.wrapper3}>BG56BUIN65431544786321</div>
-
-        <div style={styles.wrapper4}>
+        <div style={styles.account}>BG56BUIN65431544786321</div>
+        <div style={styles.balance}>568 BGN</div>
+        <div style={styles.icon_delete}>
             <img 
                 src={require('../../../../../icons/delete.png')}
                 alt = "detele" />
@@ -19,6 +13,6 @@ const AllAccounts = () => (
   </div>
 );
 
-export default AllAccounts;
+export default AccountInfo;
 
 

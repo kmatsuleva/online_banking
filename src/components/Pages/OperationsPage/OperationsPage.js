@@ -10,7 +10,7 @@ const OperationsPage = () => (
     <div>
         <OnlineBankingMenu />
         <div style={styles.wrapper}>
-            <div>
+            <div style={styles.operations}>
                 <AccountsLabelDropdown />
                 <div style={styles.container}>
                     <label style={styles.label}>Balance:</label>

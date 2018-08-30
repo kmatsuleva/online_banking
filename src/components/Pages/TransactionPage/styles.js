@@ -4,7 +4,7 @@ const styles = {
         alignContent: "flex-start",
         justifyContent: "center",
         alignItems: "baseline",
-        paddingTop: 30
+        paddingTop: 50
     },
 
     button: {

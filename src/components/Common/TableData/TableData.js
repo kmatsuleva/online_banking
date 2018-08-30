@@ -1,10 +1,9 @@
 import React from "react";
-import styles from "./styles"
 
-const TableData = ({ items }) => (
+const TableData = ({ items, style }) => (
     <tr>
         {items.map(item => {
-            return <td style={styles.item}> {item} </td>
+            return <td style={style}> {item} </td>
         })}
     </tr>
 );

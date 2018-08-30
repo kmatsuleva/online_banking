@@ -8,13 +8,13 @@ const items = ["test1", "test2", "test3", "test4"];
 
 const TransactionInfo = () => (
     <table style={styles.table}>
-        <TableHeader items = {headers} />
-        <TableData items = {items}/>
-        <TableData items = {items}/>
-        <TableData items = {items}/>
-        <TableData items = {items}/>
-        <TableData items = {items}/>
-        <TableData items = {items}/>
+        <TableHeader items = {headers} style = {styles.item}/>
+        <TableData items = {items} style = {styles.item}/>
+        <TableData items = {items} style = {styles.item}/>
+        <TableData items = {items} style = {styles.item}/>
+        <TableData items = {items} style = {styles.item}/>
+        <TableData items = {items} style = {styles.item}/>
+        <TableData items = {items} style = {styles.item}/>
     </table>
 );
 

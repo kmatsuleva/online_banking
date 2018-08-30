@@ -5,7 +5,7 @@ import FromToDate from './TransactionsComponents/FromToDate/FromToDate'
 import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton";
 import TypesLabelDropdown from "./TransactionsComponents/TypesLabelDropdown/TypesLabelDropdown"
 import styles from "./styles.js"
-import AccountsListTable from "./TransactionsComponents/TransactionInfo/TransactionInfo"
+import TransactionInfo from "./TransactionsComponents/TransactionInfo/TransactionInfo";
 
 const Transaction = () => (
     <div>
@@ -19,7 +19,7 @@ const Transaction = () => (
                 </div>
             </div>
             <div style={styles.table}>
-                <AccountsListTable />
+                <TransactionInfo />
             </div>
     </div>
 );
