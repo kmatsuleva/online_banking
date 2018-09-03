@@ -40,6 +40,12 @@ const styles = {
         alignItems: "center",
         height: 44,
         paddingLeft: 75
+    },
+
+    button: {
+        backgroundColor: "none",
+        border: "none", 
+        padding: 0
     }
   };
   

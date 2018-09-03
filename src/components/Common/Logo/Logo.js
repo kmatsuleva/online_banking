@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./styles.js";
 
-const Logo = ({ src }) => (
+const Logo = ({ src, to, alt }) => (
     <div style={styles.logo}>
-        <img src={ src }
-            alt = "Logo"
-            style={styles.image}/>
+        <a href = {to} > 
+            <img src={src}
+                alt = {alt}
+                style={styles.image}/>
+        </a>
     </div>
 );
 

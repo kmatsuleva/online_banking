@@ -7,7 +7,7 @@ const text = ["individual clients", "corporate clients", "contacts", "about us",
 
 const Menu = () => (
     <ul style={styles.ul}>
-        <li><Logo src={require('../../../images/logo.png')} /> </li>
+        <li><Logo src={require('../../../images/logo.png')} to="/login" alt="logo"/> </li>
         <Link to="#" links = {text} style={styles.link}/>
     </ul>
 );

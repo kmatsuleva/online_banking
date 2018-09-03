@@ -5,13 +5,15 @@ import TransactionPage from "./components/Pages/TransactionPage/TransactionPage"
 import AccountsPage from "./components/Pages/AccountsPage/AccountsPage";
 import OperationsPage from "./components/Pages/OperationsPage/OperationsPage"
 
+
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
           <Switch>
-            <Route path="/" component={HomePage} exact />
+            <Route path="/login" component={HomePage} exact />
             <Route path="/transaction" component={TransactionPage} />
             <Route path="/accounts" component={AccountsPage} />          
             <Route path="/operations" component={OperationsPage} />          
