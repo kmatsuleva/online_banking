@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types';     
+
 
 const TableData = ({ items, style }) => (
     <tr>
@@ -7,6 +9,12 @@ const TableData = ({ items, style }) => (
         })}
     </tr>
 );
+
+
+TableData.propTypes = {
+    items: PropTypes.element,
+    style: PropTypes.object     
+};
 
 export default TableData;
  

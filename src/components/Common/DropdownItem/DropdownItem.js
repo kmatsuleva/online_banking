@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';     
 import styles from "./styles"
 
 const DropDownItem = ({ items }) => (
@@ -8,6 +9,12 @@ const DropDownItem = ({ items }) => (
       })}
     </select>
 );
+
+
+DropDownItem.propTypes = {
+  items: PropTypes.element      
+};
+
 
 export default DropDownItem;
 

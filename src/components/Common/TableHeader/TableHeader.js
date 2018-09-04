@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';     
 import styles from "./styles"
 
 const TableHeader = ({ items }) => (
@@ -8,6 +9,10 @@ const TableHeader = ({ items }) => (
         })}
     </tr>
 );
+
+TableHeader.propTypes = {
+    items: PropTypes.element     
+};
 
 export default TableHeader;
  

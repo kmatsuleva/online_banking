@@ -3,6 +3,9 @@ import Menu from "../../Menus/Menu/Menu";
 import styles from "./styles.js";
 import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton"
 import RequiredField from "../../Common/RequiredField/RequiredField"
+import Label from "../../Common/Label/Label"
+import InputTypeText from "../../Common/InputTypeText/InputTypeText";
+import InputTypePassword from "../../Common/InputTypePassword/InputTypePassword";
 
 const HomePage = () => (
   <div>
@@ -15,15 +18,15 @@ const HomePage = () => (
                 style={styles.img}
             />
         </div>
-         <div style={styles.form}>
-                <label style={styles.label}>User: </label>
+        <div style={styles.form}>
+                <Label text="User:" />
                 <RequiredField />
-                <input type="text" style={styles.input}/>
-                <label style={styles.label}>Password: </label>
+                <InputTypeText />
+                <Label text="Password:" />
                 <RequiredField />
-                <input type="password" style={styles.input}/>
+                <InputTypePassword />
                 <PrimaryButton btnValue="Sign in" to="/accounts" onClick={this.componentDidMount}/>
-            </div>
+        </div>
     </div>
   </div>
 );

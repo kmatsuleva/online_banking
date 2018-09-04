@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';     
 
 const Link = ({links, to, style }) => (
   <li>
@@ -7,5 +8,12 @@ const Link = ({links, to, style }) => (
     })}
   </li>
 );
+
+
+Link.propTypes = {
+  links: PropTypes.element,
+  to: PropTypes.string,
+  style: PropTypes.object     
+};
 
 export default Link;

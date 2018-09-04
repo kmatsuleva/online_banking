@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';     
 import styles from "./styles.js";
 
 const Logo = ({ src, to, alt }) => (
@@ -10,5 +11,12 @@ const Logo = ({ src, to, alt }) => (
         </a>
     </div>
 );
+
+
+Logo.propTypes = {
+    src: PropTypes.string,
+    to: PropTypes.string,
+    alt: PropTypes.string
+}
 
 export default Logo;
