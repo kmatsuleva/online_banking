@@ -1,13 +1,13 @@
 const styles = {
     wrapper: {
-        width: "95%",
+        width: "44%",
         display: "flex",
         flexDirection: "row",
         boxShadow: "0 1px 0 0 rgba(0,0,0,0.2)",
         transition: "0.3s",
         borderRadius: 5,
         padding: "25px 0 20px 5px",
-        margin: "5px 115px 4px 0",
+        marginTop: 8,
         justifyContent: "center"
     },
     
@@ -39,7 +39,7 @@ const styles = {
         display: "flex",
         alignItems: "center",
         height: 44,
-        paddingLeft: 75
+        paddingLeft: 15
     },
 
     button: {

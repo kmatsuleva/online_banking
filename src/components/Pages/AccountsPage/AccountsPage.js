@@ -1,15 +1,27 @@
 import React from "react";
 import OnlineBankingMenu from "../../Menus/OnlineBankingMenu/OnlineBankingMenu";
-import AllAccountsList from "./AccountsComponents/AllAccountsList/AllAccountsList";
 import styles from "./styles"
-import AddNewAccount from "./AccountsComponents/AddNewAccount/AddNewAccount"
+import AccountInfo from "./AccountsComponents/AccountInfo/AccountInfo";
+import DropDownItem from "../../Common/DropdownItem/DropdownItem"
+import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton"
+
+
+const currency = ["BGN", "USD", "EUR"];
 
 const AccountsPage = () => (
     <div>
         <OnlineBankingMenu />
-        <AddNewAccount />
-            <div style={styles.allAccounts} >
-                <AllAccountsList />
+        <form style={styles.container}>
+            <label style={styles.label}>Account: </label>
+            <input type="text" style={styles.input} />
+            <label style={styles.label}>Currency: </label>
+            <DropDownItem items={currency} />
+            <div style={styles.button}>
+                <PrimaryButton btnValue = "Create"  />
+            </div>
+        </form> 
+            <div style={styles.accountsList} >
+                <AccountInfo />
             </div>
     </div>
 );

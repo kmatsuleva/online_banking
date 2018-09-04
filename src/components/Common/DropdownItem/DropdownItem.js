@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "./styles"
 
 const DropDownItem = ({ items }) => (
-    <select>
+    <select style={styles.dropdownMenu}>
       {items.map(value => {
         return <option value={value}>{value}</option>;
       })}

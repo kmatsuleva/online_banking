@@ -1,7 +1,6 @@
 import React from "react";
 import Menu from "../../Menus/Menu/Menu";
 import styles from "./styles.js";
-import HomeImage from "./HomePageComponents/HomeImage/HomeImage";
 import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton"
 import RequiredField from "../../Common/RequiredField/RequiredField"
 
@@ -9,7 +8,13 @@ const HomePage = () => (
   <div>
     <Menu />
     <div style={styles.flexBoxContainer}>
-        <HomeImage />
+        <div style={styles.homePageImg}>
+            <img 
+                src={require('../../../../src/images/home-page-img.jpg')} 
+                alt = "home_image"
+                style={styles.img}
+            />
+        </div>
          <div style={styles.form}>
                 <label style={styles.label}>User: </label>
                 <RequiredField />

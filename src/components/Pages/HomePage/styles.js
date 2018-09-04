@@ -38,6 +38,15 @@ const styles = {
         color: "#4a4a4a",
         boxShadow: "inset 1px 1px 2px rgba(0, 0, 0, 0.2)",
         width: 260
+    },
+
+    homePageImg: {
+        width: "75%"
+    },
+    
+    img: {
+        width: 820,
+        paddingLeft: 20
     }
 }
 
