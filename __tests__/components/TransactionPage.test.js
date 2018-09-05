@@ -6,9 +6,10 @@ import { shallow } from 'enzyme';
 Enzyme.configure({ adapter: new Adapter() })
 
 import TransactionPage from "../../src/components/Pages/TransactionPage/TransactionPage"
-import OnlineMenu from "../../src/components/Menus/OnlineMenu/OnlineMenu"
+import OnlineBankingMenu from "../../src/components/Menus/OnlineBankingMenu/OnlineBankingMenu"
 import Label from "../../src/components/Common/Label/Label"
 import DropDownItem from "../../src/components/Common/DropdownItem/DropdownItem"
+import FromToDate from "../../src/components/Common/FromToDate/FromToDate"
 import TableHeader from "../../src/components/Common/TableHeader/TableHeader"
 import TableData from "../../src/components/Common/TableData/TableData"
 import PrimaryButton  from "../../src/components/Common/PrimaryButton/PrimaryButton"
@@ -19,9 +20,9 @@ describe("< TransactionPage />", () => {
         shallow(<TransactionPage />);
     });
 
-    it("renders <OnlineMenu /> component", () => {
+    it("renders <OnlineBankingMenu /> component", () => {
         const wrapper = shallow(<TransactionPage />);
-        expect(wrapper.find(OnlineMenu).length).toEqual(1);
+        expect(wrapper.find(OnlineBankingMenu).length).toEqual(1);
     });
 
     it("renders <Label /> component", () => {
@@ -56,9 +57,9 @@ describe("< TransactionPage />", () => {
 
     it("renders one <PrimaryButton /> component", () => {
         const wrapper = shallow((
-            <OperationsPage>
+            <TransactionPage>
                <PrimaryButton btnValue = "Execute"/>
-            </OperationsPage>
+            </TransactionPage>
           ));
         expect(wrapper.containsAllMatchingElements([
             <PrimaryButton btnValue = "Execute"/>
