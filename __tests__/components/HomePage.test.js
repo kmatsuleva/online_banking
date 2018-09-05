@@ -20,6 +20,29 @@ describe("< HomePage />", () => {
         shallow(<HomePage />);
     });
 
+    it("renders <Menu /> component", () => {
+        const wrapper = shallow(<HomePage />);
+        expect(wrapper.find(Menu).length).toEqual(1);
+    });
+
+    it('renders children when passed in', () => {
+        const wrapper = shallow(<AccountsPage />);
+        expect(
+            <img src={require('../../../../src/images/home-page-img.jpg')} />
+        ).toBeDefined(); 
+    });
+    
+    it('renders <form /> element', () => {
+        const wrapper = shallow((
+            <AccountsPage>
+                <img  />
+            </AccountsPage>
+          ));
+        expect(wrapper.containsAllMatchingElements([
+            <img src={require('../../../../src/images/home-page-img.jpg')} />
+        ]));
+    });
+
     it("renders <Label /> component", () => {
         const wrapper = shallow(<HomePage />);
         expect(wrapper.find(Label).length).toEqual(2);
@@ -40,10 +63,10 @@ describe("< HomePage />", () => {
         expect(wrapper.find(InputTypePassword).length).toEqual(1);
     });
 
-    // it("renders one <PrimaryButton /> component", () => {
-    //     const wrapper = shallow(<HomePage />);
-    //     expect(wrapper.find(PrimaryButton).length).toEqual(1);
-    // });
+    it("renders one <PrimaryButton /> component", () => {
+        const wrapper = shallow(<HomePage />);
+        expect(wrapper.find(PrimaryButton).length).toEqual(1);
+    });
 })
 
   
