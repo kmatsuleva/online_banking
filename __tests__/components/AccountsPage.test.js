@@ -32,7 +32,6 @@ describe("< AccountsPage />", () => {
     });
 
     it('renders children when passed in', () => {
-        const wrapper = shallow(<AccountsPage />);
         expect(<form style={styles.container} />).toBeDefined(); 
     });
 

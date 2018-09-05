@@ -25,7 +25,7 @@ const styles = {
     },
     
     img: {
-        width: 820,
+        width: "52em",
         paddingLeft: 20
     }
 }

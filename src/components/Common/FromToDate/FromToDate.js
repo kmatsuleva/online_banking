@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from 'prop-types'; 
 import Label from "../Label/Label"  
 import InputTypeDate from "../InputTypeDate/InputTypeDate"  
 import styles from "./styles"
@@ -16,9 +15,9 @@ const labelStyles = {
 const FromToDate = () => (
         <form style={styles.container}>
                 <Label text = "From:" style={labelStyles}/>
-                <InputTypeDate />
+                <InputTypeDate min="2018-01-01" max="2022-08-09"/>
                 <Label text ="To: " style={labelStyles}/>
-                <InputTypeDate />
+                <InputTypeDate min="2018-01-01" max="2022-08-09"/>
         </form>
 );
 

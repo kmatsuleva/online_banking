@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';     
 import styles from "./styles"
 
-const DropDownItem = ({ items }) => (
+const DropDownItem = ({ items = [] }) => (
     <select style={styles.dropdownMenu}>
       {items.map(value => {
         return <option value={value}>{value}</option>;
@@ -12,7 +12,7 @@ const DropDownItem = ({ items }) => (
 
 
 DropDownItem.propTypes = {
-  items: PropTypes.element      
+  items: PropTypes.node    
 };
 
 

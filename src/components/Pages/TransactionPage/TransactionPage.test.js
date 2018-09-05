@@ -3,17 +3,16 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
 
+import TransactionPage from "../TransactionPage/TransactionPage"
+import OnlineBankingMenu from '../../Menus/OnlineBankingMenu/OnlineBankingMenu';
+import FromToDate from '../../Common/FromToDate/FromToDate'
+import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton";
+import DropDownItem from "../../Common/DropdownItem/DropdownItem"
+import TableHeader from "../../Common/TableHeader/TableHeader"
+import TableData from "../../Common/TableData/TableData"
+import Label from "../../Common/Label/Label"
+
 Enzyme.configure({ adapter: new Adapter() })
-
-import TransactionPage from "../../src/components/Pages/TransactionPage/TransactionPage"
-import OnlineBankingMenu from "../../src/components/Menus/OnlineBankingMenu/OnlineBankingMenu"
-import Label from "../../src/components/Common/Label/Label"
-import DropDownItem from "../../src/components/Common/DropdownItem/DropdownItem"
-import FromToDate from "../../src/components/Common/FromToDate/FromToDate"
-import TableHeader from "../../src/components/Common/TableHeader/TableHeader"
-import TableData from "../../src/components/Common/TableData/TableData"
-import PrimaryButton  from "../../src/components/Common/PrimaryButton/PrimaryButton"
-
 
 describe("< TransactionPage />", () => {
     it('renders without crashing', () => {
@@ -55,14 +54,4 @@ describe("< TransactionPage />", () => {
         expect(wrapper.find(PrimaryButton).length).toEqual(1);
     });
 
-    it("renders one <PrimaryButton /> component", () => {
-        const wrapper = shallow((
-            <TransactionPage>
-               <PrimaryButton btnValue = "Execute"/>
-            </TransactionPage>
-          ));
-        expect(wrapper.containsAllMatchingElements([
-            <PrimaryButton btnValue = "Execute"/>
-        ]));
-    });
 })

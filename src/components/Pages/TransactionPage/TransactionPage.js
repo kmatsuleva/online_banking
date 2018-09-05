@@ -14,14 +14,6 @@ const headers = [ "date and time", "account", "operation", "amount"];
 const items = ["test1", "test2", "test3", "test4"];
 
 
-const labelStyles = {
-    fontSize: 18,
-    color: "#15517d",
-    fontFamily: "Roboto, Arial, sans-serif",
-    marginBottom: 8,
-    padding: "0 30px"
-};
-
 const TransactionPage = () => (
     <div>
         <OnlineBankingMenu />
@@ -43,6 +35,15 @@ const TransactionPage = () => (
             </div>
     </div>
 );
+
+
+const labelStyles = {
+    fontSize: 18,
+    color: "#15517d",
+    fontFamily: "Roboto, Arial, sans-serif",
+    marginBottom: 8,
+    padding: "0 30px"
+};
 
 export default TransactionPage;
  

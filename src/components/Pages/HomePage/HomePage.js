@@ -7,6 +7,21 @@ import Label from "../../Common/Label/Label"
 import InputTypeText from "../../Common/InputTypeText/InputTypeText";
 import InputTypePassword from "../../Common/InputTypePassword/InputTypePassword";
 
+
+
+// const logIn = () => {
+
+//     mock
+//         .onPost(/\/v1\/accounts\/d+\/deposit/, {
+//             params: {
+//                 value: 100
+//             }
+//         }).reply(200,
+//         {
+//             message: "Operation successful"
+//         })
+//}
+
 const HomePage = () => (
   <div>
     <Menu />
@@ -25,7 +40,7 @@ const HomePage = () => (
                 <Label text="Password:" />
                 <RequiredField />
                 <InputTypePassword />
-                <PrimaryButton btnValue="Sign in" to="/accounts" onClick={this.componentDidMount}/>
+                <PrimaryButton btnValue="Sign in" to="/accounts" />
         </div>
     </div>
   </div>

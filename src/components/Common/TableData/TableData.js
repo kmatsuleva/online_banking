@@ -12,7 +12,7 @@ const TableData = ({ items, style }) => (
 
 
 TableData.propTypes = {
-    items: PropTypes.element,
+    items: PropTypes.node,
     style: PropTypes.object     
 };
 

@@ -3,17 +3,16 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
 
+import HomePage from "./HomePage"
+import Menu from "../../Menus/Menu/Menu";
+import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton"
+import RequiredField from "../../Common/RequiredField/RequiredField"
+import Label from "../../Common/Label/Label"
+import InputTypeText from "../../Common/InputTypeText/InputTypeText";
+import InputTypePassword from "../../Common/InputTypePassword/InputTypePassword";
+
+
 Enzyme.configure({ adapter: new Adapter() })
-
-import HomePage from "../../src/components/Pages/HomePage/HomePage"
-import Menu from "../../src/components/Menus/Menu/Menu"
-import Label from "../../src/components/Common/Label/Label"
-import RequiredField from '../../src/components/Common/RequiredField/RequiredField';
-import InputTypeText from "../../src/components/Common/InputTypeText/InputTypeText"
-import InputTypePassword from "../../src/components/Common/InputTypePassword/InputTypePassword"
-
-import PrimaryButton  from "../../src/components/Common/PrimaryButton/PrimaryButton"
-
 
 describe("< HomePage />", () => {
     it('renders without crashing', () => {
@@ -23,23 +22,6 @@ describe("< HomePage />", () => {
     it("renders <Menu /> component", () => {
         const wrapper = shallow(<HomePage />);
         expect(wrapper.find(Menu).length).toEqual(1);
-    });
-
-    it('renders children when passed in', () => {
-        expect(
-            <img src={require('../../src/images/home-page-img.jpg')} />
-        ).toBeDefined(); 
-    });
-    
-    it('renders <img /> element', () => {
-        const wrapper = shallow((
-            <HomePage>
-                <img src={require('../../src/images/home-page-img.jpg')} />
-            </HomePage>
-          ));
-        expect(wrapper.containsAllMatchingElements([
-            <img src={require('../../src/images/home-page-img.jpg')} />
-        ]));
     });
 
     it("renders <Label /> component", () => {

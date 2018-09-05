@@ -11,7 +11,7 @@ const TableHeader = ({ items }) => (
 );
 
 TableHeader.propTypes = {
-    items: PropTypes.element     
+    items: PropTypes.node     
 };
 
 export default TableHeader;
