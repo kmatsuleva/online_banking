@@ -6,7 +6,7 @@ import { shallow } from 'enzyme';
 Enzyme.configure({ adapter: new Adapter() })
 
 import OperationsPage from "../../src/components/Pages/OperationsPage/OperationsPage"
-import OnlineBankingMenu from "../../src/components/Menus/OnlineBankingMenu/OnlineBankingMenu"
+import OnlineMenu from "../../src/components/Menus/OnlineMenu/OnlineMenu"
 import Label from "../../src/components/Common/Label/Label"
 import DropDownItem from "../../src/components/Common/DropdownItem/DropdownItem"
 import InputTypeText from "../../src/components/Common/InputTypeText/InputTypeText"
@@ -18,9 +18,9 @@ describe("< OperationsPage />", () => {
         shallow(<OperationsPage />);
     });
 
-    it("renders <OnlineBankingMenu /> component", () => {
+    it("renders <OnlineMenu /> component", () => {
         const wrapper = shallow(<OperationsPage />);
-        expect(wrapper.find(OnlineBankingMenu).length).toEqual(1);
+        expect(wrapper.find(OnlineMenu).length).toEqual(1);
     });
 
 
@@ -34,10 +34,33 @@ describe("< OperationsPage />", () => {
         expect(wrapper.find(DropDownItem).length).toEqual(2);
     });
 
+    it('renders children when passed in', () => {
+        const wrapper = shallow(<OperationsPage />);
+        expect(
+            <img src={require('../../../../src/images/home-page-img.jpg')} />
+        ).toBeDefined(); 
+    });
+    
+    it('renders <img /> element', () => {
+        const wrapper = shallow((
+            <OperationsPage>
+                <img  />
+            </OperationsPage>
+          ));
+        expect(wrapper.containsAllMatchingElements([
+            <img src={require('../../../../src/images/home-page-img.jpg')} />
+        ]));
+    });
+
+
+    it("renders two <RequiredField /> component", () => {
+        const wrapper = shallow(<OperationsPage />);
+        expect(wrapper.find(RequiredField).length).toEqual(2);
+    });
 
     it("renders two <InputTypeText /> component", () => {
         const wrapper = shallow(<OperationsPage />);
-        expect(wrapper.find(InputTypeText).length).toEqual(2);
+        expect(wrapper.find(InputTypeText).length).toEqual(1);
     });
 
     it("renders one <PrimaryButton /> component", () => {
