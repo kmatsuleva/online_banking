@@ -12,7 +12,7 @@ const DropDownItem = ({ items = [] }) => (
 
 
 DropDownItem.propTypes = {
-  items: PropTypes.node    
+  items: PropTypes.node.isRequired    
 };
 
 

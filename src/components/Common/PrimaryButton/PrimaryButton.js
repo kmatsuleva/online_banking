@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';     
 
 const PrimaryButton = ({ btnValue, to, onClick, btnStyle, linkInButton }) => (
-  <button style={btnStyle} onClick = {onClick}>
+  <button type = "submit" style={btnStyle} onClick = {onClick}>
     <a href={to} style={linkInButton}> {btnValue} </a>
   </button>
 );

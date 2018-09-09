@@ -1,14 +1,22 @@
 const styles = {
+    accountsList: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    
     wrapper: {
         width: "44%",
         display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         flexDirection: "row",
         boxShadow: "0 1px 0 0 rgba(0,0,0,0.2)",
         transition: "0.3s",
         borderRadius: 5,
         padding: "25px 0 20px 5px",
         marginTop: 8,
-        justifyContent: "center"
+        marginLeft: 42
     },
     
     account: {

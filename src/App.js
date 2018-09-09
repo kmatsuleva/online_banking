@@ -6,7 +6,8 @@ import HomePage from "./components/Pages/HomePage/HomePage";
 import TransactionPage from "./components/Pages/TransactionPage/TransactionPage";
 import AccountsPage from "./components/Pages/AccountsPage/AccountsPage";
 import OperationsPage from "./components/Pages/OperationsPage/OperationsPage"
-
+import CreateAccount from "./components/Pages/AccountsPage/AccountsComponents/CreateAccount/CreateAccount"
+import AccountsListContainer from "./containers/AccountsListContainer"
 
 // const mock = new MockAdapter(axios)
 
@@ -36,6 +37,7 @@ class App extends Component {
             <Route path="/accounts" component={AccountsPage} />          
             <Route path="/operations" component={OperationsPage} />          
           </Switch>
+          <AccountsListContainer />
         </div>
       </BrowserRouter>
     );
