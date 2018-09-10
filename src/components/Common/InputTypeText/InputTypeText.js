@@ -8,7 +8,7 @@ const InputTypeText = ({  style, placeholder, disabled }) => (
 InputTypeText.propTypes = {
     style: PropTypes.object,
     placeholder: PropTypes.string,
-    disabled: PropTypes.element
+    disabled: PropTypes.bool
 };
 
 InputTypeText.defaultProps = {

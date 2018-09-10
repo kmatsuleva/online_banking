@@ -3,33 +3,38 @@ import { connect } from "react-redux";
 import { createAccount } from "../../../../../reducers/accounts";
 import PrimaryButton from "../../../../Common/PrimaryButton/PrimaryButton"
 import Label from "../../../../Common/Label/Label";
-import DropDownItem from "../../../../Common/DropdownItem/DropdownItem";
 import styles from "./styles"
-
-const currency = ["BGN", "USD", "EUR"];
 
 const CreateAccount = ({ dispatch }) => {
   let input;
+  let option;
 
   return (
     <div>
-      <form
-        onSubmit={e => {
-          e.preventDefault();
-          if (!input.value.trim()) {
-            return;
-          }
-          dispatch(createAccount(input.value));
-          input.value = "";
-        }}
-      >
+      <form>
         <Label text="Account:" style={labelStyles} />
         <input type="text" ref={node => (input = node)} style={styles.input} />
         <Label text="Currency:" style={labelStyles}/>
-        <DropDownItem value = {currency}/>
+        
+        <select ref={node => (option = node)} style={styles.currency}>
+          <option>BGN</option>
+          <option>USD</option>
+          <option>EUR</option>
+        </select>
+
         <span style={styles.button}>
-          <PrimaryButton btnValue="Create" />
+          <PrimaryButton
+            btnValue="Create"
+            onClick={e => {
+            e.preventDefault();
+            if (!input.value.trim()) {
+              return;
+            }
+            dispatch(createAccount(input.value, option.value));
+            input.value = "";
+          }}/>
         </span>
+
       </form>
     </div>
   );

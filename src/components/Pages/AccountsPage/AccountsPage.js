@@ -4,8 +4,6 @@ import styles from "./styles"
 import CreateAccount from "./AccountsComponents/CreateAccount/CreateAccount";
 
 
-const currency = ["BGN", "USD", "EUR"];
-
 const AccountsPage = () => (
     <div>
         <OnlineBankingMenu />

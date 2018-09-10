@@ -17,6 +17,7 @@ exports[`< PrimaryButton /> should render correctly 1`] = `
       "paddingTop": 8,
     }
   }
+  type="submit"
 >
   <a
     href="mockTo"

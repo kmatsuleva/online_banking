@@ -1,9 +1,11 @@
 let nextAccountsId = 0;
-export const createAccount = text => ({
+export const createAccount = (title, currency) => ({
   type: "CREATE_ACCOUNT",
   id: nextAccountsId++,
-  text
+  title,
+  currency
 });
+
 
 const accounts = (state = [], action) => {
   switch (action.type) {
@@ -12,10 +14,12 @@ const accounts = (state = [], action) => {
         ...state,
         {
           id: action.id,
-          text: action.text
+          title: action.title,
+          currency: action.currency
         }
       ];
 
+  
     default:
       return state;
   }

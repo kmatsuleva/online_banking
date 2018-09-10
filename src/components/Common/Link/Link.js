@@ -11,7 +11,7 @@ const Link = ({links = [] , to, style }) => (
 
 
 Link.propTypes = {
-  links: PropTypes.element,
+  links: PropTypes.array,
   to: PropTypes.string,
   style: PropTypes.object     
 };
