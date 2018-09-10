@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import accounts from "../reducers/accounts";
+import accounts from "../reducers/bank_accounts";
 
 export default combineReducers({
   accounts

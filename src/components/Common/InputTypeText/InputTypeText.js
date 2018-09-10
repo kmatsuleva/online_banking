@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';     
 
-const InputTypeText = ({  style, placeholder, disabled }) => (
-    <input type="text" style={style} placeholder={placeholder} disabled={disabled} />
+const InputTypeText = ({  style, placeholder, disabled, ref }) => (
+    <input type="text" style={style} placeholder={placeholder} disabled={disabled} ref={ref} />
 );
 
 InputTypeText.propTypes = {

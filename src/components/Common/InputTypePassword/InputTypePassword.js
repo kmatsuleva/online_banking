@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';     
 
-const InputTypePassword = ({  style }) => (
-    <input type="password" style={style}  />
+const InputTypePassword = ({  style, ref }) => (
+    <input type="password" style={style} ref={ref} />
 );
 
 
 InputTypePassword.propTypes = {
-    style: PropTypes.object  
+    style: PropTypes.object,
+    ref: PropTypes.func  
 };
 
 InputTypePassword.defaultProps = {

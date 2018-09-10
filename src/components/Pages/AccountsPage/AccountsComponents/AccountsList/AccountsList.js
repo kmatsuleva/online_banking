@@ -2,8 +2,15 @@ import React from "react";
 import AccountInfo from "./../AccountInfo/AccountInfo";
 import PropTypes from 'prop-types';  
 
-const AccountsList = ({ accounts=[] }) => (
-  <div>{accounts.map(account => <AccountInfo {...account}  />)}</div>
+const AccountsList = ({ accounts , deleteAccount }) => (
+  <div>
+    {accounts.map(account =>
+      <AccountInfo
+        {...account}
+        onClick={() => deleteAccount(account.id)}
+      />
+    )}
+  </div>
 );
 
 

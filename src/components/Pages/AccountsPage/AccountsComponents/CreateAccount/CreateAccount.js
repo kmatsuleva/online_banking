@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { createAccount } from "../../../../../reducers/accounts";
+import { createAccount } from "../../../../../reducers/bank_accounts";
 import PrimaryButton from "../../../../Common/PrimaryButton/PrimaryButton"
 import Label from "../../../../Common/Label/Label";
 import styles from "./styles"
