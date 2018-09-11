@@ -8,7 +8,7 @@ const to = ["/accounts"]
 
 const TransactionMenu = () => (
     <ul style={styles.ul}>
-        <li><Logo src={require('../../../images/logo.png')} to="/" alt="logo" /> </li>
+        <li><Logo src={require('../../../images/logo.png')} to="/login" alt="logo" /> </li>
         <Link to={to} links = {listItem} style={styles.link}/>
     </ul>
 );
