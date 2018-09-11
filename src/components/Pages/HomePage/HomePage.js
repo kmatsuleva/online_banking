@@ -15,7 +15,6 @@ var mock = new MockAdapter(axios);
 
 mock.onPost('/login').reply((response) => {
     const data = JSON.parse(response.data)
-    console.log(data);
         if(data.username === 'admin' && data.password === 'admin') {
           return ([200, { message: console.log('hi') } ]);
         } else {
@@ -24,7 +23,8 @@ mock.onPost('/login').reply((response) => {
 });
 
 
-// console.log(store.getState())
+
+// console.log(store.getState().accounts);
 
 const HomePage = ({ dispatch }) => {
     let username; 

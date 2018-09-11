@@ -14,7 +14,7 @@ export const deleteAccount = id => ({
   id
 });
 
-const accounts = (state = [], action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case CREATE_BANK_ACCOUNT:
       return [
@@ -32,5 +32,3 @@ const accounts = (state = [], action) => {
       return state;
   }
 };
-
-export default accounts;
