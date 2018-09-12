@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import App from "./App";
 import rootReducer from "./store/reducers";
  
-const store = createStore(rootReducer);
+export const store = createStore(rootReducer);
 
 render(
   <Provider store={store}>
@@ -13,5 +13,3 @@ render(
   </Provider>,
   document.getElementById("root")
 );
-
-export default store

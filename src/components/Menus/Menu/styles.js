@@ -8,7 +8,8 @@ const styles = {
         alignItems: "center",
         verticalAlign: "baseline",
         display: "flex",
-        listStyleType: "none"
+        listStyleType: "none",
+        width: "100%"
     },
 
     link: {

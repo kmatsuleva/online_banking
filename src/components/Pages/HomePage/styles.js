@@ -9,6 +9,7 @@ const styles = {
     
     form: {
         width: "25%",
+        minWidth: 200,
         boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
         transition: "0.3s",
         borderRadius: 5,
@@ -22,9 +23,9 @@ const styles = {
     homePageImg: {
         width: "75%"
     },
-    
+
     img: {
-        width: "52em",
+        width: "87%",
         paddingLeft: 20
     },
 
@@ -38,7 +39,8 @@ const styles = {
         fontSize: 18,
         color: "#4a4a4a",
         boxShadow: "inset 1px 1px 2px rgba(0, 0, 0, 0.2)",
-        width: "81%"
+        width: "81%",
+        minWidth: 150
     }
 }
 

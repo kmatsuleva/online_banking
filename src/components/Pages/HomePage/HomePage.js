@@ -3,13 +3,12 @@ import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter'
 import { connect } from "react-redux";
 import { BrowserRouter, Redirect } from 'react-router-dom';
-import { checkAuth } from "../../../reducers/auth";
 import Menu from "../../Menus/Menu/Menu";
 import styles from "./styles.js";
 import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton"
 import RequiredField from "../../Common/RequiredField/RequiredField"
 import Label from "../../Common/Label/Label"
-import store from '../../../index'
+import { store } from '../../../index'
 
 var mock = new MockAdapter(axios);
 
@@ -20,24 +19,22 @@ mock.onPost('/login').reply((response) => {
         } else {
           return([500, { success: false } ]);
         }
-});
+}); 
 
 
-
-// console.log(store.getState().accounts);
-
-const HomePage = ({ dispatch }) => {
+const HomePage = () => {
     let username; 
     let password;
 
-    // if (store.getState().auth) {
-    //     return (
-    //         <BrowserRouter> 
-    //             <Redirect to="/accounts" /> 
-    //         </BrowserRouter> 
-    //     )
+    // const redirect = () => {
+        // if (!store.getState().auth.loggedIn) {
+        //     return (
+        //         <BrowserRouter> 
+        //             <Redirect to="/accounts" /> 
+        //         </BrowserRouter> 
+        //     )
+        // }
     // }
-
 
     return (
         <div>
@@ -59,15 +56,16 @@ const HomePage = ({ dispatch }) => {
                         <input type="password" ref={node => (password = node)}  style={styles.input}/>
                         <PrimaryButton btnValue="Sign in" 
                             onClick={() => {
-                                dispatch(checkAuth(username.value, password.value))
-                                
                                 axios.post('/login', {username: username.value, password: password.value})
-                                .then(() => {
-                                   
+                                .then((response) => {
+                                    console.log(response);
+                                    //redirect()
                                 })
-                                .catch(function (error) {
+                                .catch((error) => {
                                     console.log(error)
                                 });
+
+                                //redirect()
                             }}/>
                             
                 </div>
