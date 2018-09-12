@@ -1,16 +1,23 @@
 import React from "react";
 import axios from 'axios';
-import MockAdapter from 'axios-mock-adapter'
 import { connect } from "react-redux";
+import MockAdapter from 'axios-mock-adapter'
 import { BrowserRouter, Redirect } from 'react-router-dom';
 import Menu from "../../Menus/Menu/Menu";
-import styles from "./styles.js";
+//import styles from "./styles.js";
 import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton"
 import RequiredField from "../../Common/RequiredField/RequiredField"
 import Label from "../../Common/Label/Label"
 import { store } from '../../../index'
+import { checkAuth } from "../../../reducers/auth";
+import "./styles.css"
+
 
 var mock = new MockAdapter(axios);
+
+export const client = axios.create({
+    baseURL:'/login'
+});
 
 mock.onPost('/login').reply((response) => {
     const data = JSON.parse(response.data)
@@ -22,53 +29,43 @@ mock.onPost('/login').reply((response) => {
 }); 
 
 
-const HomePage = () => {
+const HomePage = ({ dispatch, history }) => {
     let username; 
     let password;
-
-    // const redirect = () => {
-        // if (!store.getState().auth.loggedIn) {
-        //     return (
-        //         <BrowserRouter> 
-        //             <Redirect to="/accounts" /> 
-        //         </BrowserRouter> 
-        //     )
-        // }
-    // }
 
     return (
         <div>
             <Menu />
-            <div style={styles.flexBoxContainer}>
-                <div style={styles.homePageImg}>
+            <div className="container__homePage">
+                <div className="homePage__imgContainer">
                     <img 
                         src={require('../../../../src/images/home-page-img.jpg')} 
                         alt = "home_image"
-                        style={styles.img}
+                        className = "img homePage__img"
                     />
                 </div>
-                <div style={styles.form}>
-                        <Label text="User:" />
+                <form className="homePage__form">
+                        <Label text="User:" className="form__label" />
                         <RequiredField />
-                        <input type="text" ref={node => (username = node)} style={styles.input}/>
+                        <input type="text" ref={node => (username = node)} className="form__input"/>
                         <Label text="Password:" />
                         <RequiredField />
-                        <input type="password" ref={node => (password = node)}  style={styles.input}/>
+                        <input type="password" ref={node => (password = node)}  className="form__input"/>
                         <PrimaryButton btnValue="Sign in" 
                             onClick={() => {
-                                axios.post('/login', {username: username.value, password: password.value})
-                                .then((response) => {
-                                    console.log(response);
-                                    //redirect()
-                                })
-                                .catch((error) => {
-                                    console.log(error)
-                                });
-
-                                //redirect()
+                                dispatch(checkAuth(username.value, password.value))
+                                axios
+                                    .post('/login', {username: username.value, password: password.value})
+                                    .then(() => {
+                                        history.push('/accounts')
+                                    })
+                                    .catch((error) => {
+                                        console.log(error)
+                                    })
                             }}/>
                             
-                </div>
+                </form>
+                
             </div>
         </div>
     )

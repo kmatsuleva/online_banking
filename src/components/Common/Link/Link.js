@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from 'prop-types';     
 
-const Link = ({links = [] , to, style }) => (
+const Link = ({links = [] , to, className }) => (
   <li>
     {links.map(text => {
-      return  <a href={to} style={style}> { text } </a>
+      return  <a href={to} className={className}> { text } </a>
     })}
   </li>
 );
@@ -13,7 +13,7 @@ const Link = ({links = [] , to, style }) => (
 Link.propTypes = {
   links: PropTypes.array,
   to: PropTypes.string,
-  style: PropTypes.object     
+  className: PropTypes.string     
 };
 
 export default Link;

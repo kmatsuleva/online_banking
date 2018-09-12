@@ -26,12 +26,16 @@ export default (state = { loggedIn: false }, action) => {
   switch (action.type) {
     case AUTH_LOGIN_SUCCESS:
       return {
-        loggedIn: true,
+        loggedIn: !state.loggedIn,
         url: action.payload.url,
         data: action.payload.data
-      };
+      };  
+      
     case AUTH_LOGIN_FAILURE:
-      return {};
+      console.log('asd')
+      return {
+        loggedIn: state.loggedIn
+      }
     default:
       return state
   }
