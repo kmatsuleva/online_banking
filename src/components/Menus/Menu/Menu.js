@@ -1,5 +1,4 @@
 import React from "react";
-//import styles from "./styles";
 import Link from "../../Common//Link/Link"
 import Logo from "../../Common/Logo/Logo"
 import "./styles.css"

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`< Logo /> should render correctly 1`] = `
+<div
+  style={
+    Object {
+      "vertivalalign": "baseline",
+    }
+  }
+>
+  <a
+    href="/"
+  >
+    <img
+      src="../../image.png"
+      style={
+        Object {
+          "width": 250,
+        }
+      }
+    />
+  </a>
+</div>
+`;

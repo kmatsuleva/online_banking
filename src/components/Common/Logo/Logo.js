@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from 'prop-types';     
-import styles from "./styles.js";
+import "./styles.css";
 
 const Logo = ({ src, to, alt }) => (
-    <div style={styles.logo}>
+    <div className = "logo">
         <a href = {to} > 
             <img src={src}
                 alt = {alt}
-                style={styles.image}/>
+                className="image"/>
         </a>
     </div>
 );

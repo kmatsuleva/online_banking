@@ -32,7 +32,6 @@ export default (state = { loggedIn: false }, action) => {
       };  
       
     case AUTH_LOGIN_FAILURE:
-      console.log('asd')
       return {
         loggedIn: state.loggedIn
       }

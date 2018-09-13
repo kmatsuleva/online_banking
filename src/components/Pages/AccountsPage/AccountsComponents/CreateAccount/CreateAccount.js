@@ -6,14 +6,14 @@ import Label from "../../../../Common/Label/Label";
 import styles from "./styles"
 
 const CreateAccount = ({ dispatch }) => {
-  let input;
+  let account;
   let option;
 
   return (
     <div>
       <form>
         <Label text="Account:" style={labelStyles} />
-        <input type="text" ref={node => (input = node)} style={styles.input} />
+        <input type="text" ref={node => (account = node)} style={styles.input} />
         <Label text="Currency:" style={labelStyles}/>
         
         <select ref={node => (option = node)} style={styles.currency}>
@@ -27,11 +27,11 @@ const CreateAccount = ({ dispatch }) => {
             btnValue="Create"
             onClick={e => {
             e.preventDefault();
-            if (!input.value.trim()) {
+            if (!account.value.trim()) {
               return;
             }
-            dispatch(createAccount(input.value, option.value));
-            input.value = "";
+            dispatch(createAccount(account.value, option.value));
+            account.value = "";
           }}/>
         </span>
 

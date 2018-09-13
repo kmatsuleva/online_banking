@@ -8,8 +8,6 @@ import Menu from "../../Menus/Menu/Menu";
 import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton"
 import RequiredField from "../../Common/RequiredField/RequiredField"
 import Label from "../../Common/Label/Label"
-import InputTypeText from "../../Common/InputTypeText/InputTypeText";
-import InputTypePassword from "../../Common/InputTypePassword/InputTypePassword";
 
 
 Enzyme.configure({ adapter: new Adapter() })
@@ -32,16 +30,6 @@ describe("< HomePage />", () => {
     it("renders two <RequiredField /> component", () => {
         const wrapper = shallow(<HomePage />);
         expect(wrapper.find(RequiredField).length).toEqual(2);
-    });
-
-    it("renders two <InputTypeText /> component", () => {
-        const wrapper = shallow(<HomePage />);
-        expect(wrapper.find(InputTypeText).length).toEqual(1);
-    });
-
-    it("renders two <InputTypePassword /> component", () => {
-        const wrapper = shallow(<HomePage />);
-        expect(wrapper.find(InputTypePassword).length).toEqual(1);
     });
 
     it("renders one <PrimaryButton /> component", () => {

@@ -2,13 +2,10 @@ import React from "react";
 import axios from 'axios';
 import { connect } from "react-redux";
 import MockAdapter from 'axios-mock-adapter'
-import { BrowserRouter, Redirect } from 'react-router-dom';
 import Menu from "../../Menus/Menu/Menu";
-//import styles from "./styles.js";
 import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton"
 import RequiredField from "../../Common/RequiredField/RequiredField"
 import Label from "../../Common/Label/Label"
-import { store } from '../../../index'
 import { checkAuth } from "../../../reducers/auth";
 import "./styles.css"
 
@@ -21,11 +18,11 @@ export const client = axios.create({
 
 mock.onPost('/login').reply((response) => {
     const data = JSON.parse(response.data)
-        if(data.username === 'admin' && data.password === 'admin') {
-          return ([200, { message: console.log('hi') } ]);
-        } else {
-          return([500, { success: false } ]);
-        }
+    if(data.username === 'admin' && data.password === 'admin') {
+        return ([200, { message: console.log('hi') } ]);
+    } else {
+        return([500, { success: false } ]);
+    }
 }); 
 
 
