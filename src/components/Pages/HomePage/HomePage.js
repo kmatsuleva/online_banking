@@ -26,7 +26,7 @@ mock.onPost('/login').reply((response) => {
 }); 
 
 
-const HomePage = ({ dispatch, history }) => {
+const LoginPage = ({ dispatch, history }) => {
     let username; 
     let password;
 
@@ -69,4 +69,4 @@ const HomePage = ({ dispatch, history }) => {
   
 };
 
-export default connect()(HomePage);
+export default connect()(LoginPage);
