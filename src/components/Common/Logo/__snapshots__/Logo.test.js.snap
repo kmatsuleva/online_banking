@@ -2,22 +2,14 @@
 
 exports[`< Logo /> should render correctly 1`] = `
 <div
-  style={
-    Object {
-      "vertivalalign": "baseline",
-    }
-  }
+  className="logo"
 >
   <a
     href="/"
   >
     <img
+      className="image"
       src="../../image.png"
-      style={
-        Object {
-          "width": 250,
-        }
-      }
     />
   </a>
 </div>

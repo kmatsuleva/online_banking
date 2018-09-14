@@ -7,12 +7,12 @@ import Logo from "../../Common/Logo/Logo"
 const TransactionMenu = () => (
     <ul>
         <li><Logo src={require('../../../images/logo.png')} to="/login" alt="logo"/> </li>
-        <Link to="/accounts" className="link">accounts </Link>
-        <Link to="/transaction" className="link">transactions</Link>
-        <Link to="/operations" className="link">operations </Link>
-        <Link to="#" className="link">settings </Link>
-        <Link to="#" className="link">contacts </Link>
-        <Link to="#" className="link">log out </Link>  
+        <li><Link to="/accounts" className="link">accounts </Link></li>
+        <li><Link to="/transaction" className="link">transactions</Link></li>
+        <li><Link to="/operations" className="link">operations </Link></li>
+        <li><Link to="#" className="link">settings </Link></li>
+        <li><Link to="#" className="link">contacts </Link></li>
+        <li><Link to="#" className="link">log out </Link> </li>
     </ul>
 );
 

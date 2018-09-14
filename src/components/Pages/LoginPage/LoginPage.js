@@ -1,7 +1,5 @@
 import React from "react";
-import axios from 'axios';
 import { connect } from "react-redux";
-import MockAdapter from 'axios-mock-adapter'
 import Menu from "../../Menus/Menu/Menu";
 import PrimaryButton from "../../Common/PrimaryButton/PrimaryButton"
 import RequiredField from "../../Common/RequiredField/RequiredField"
@@ -10,25 +8,33 @@ import { checkAuth } from "../../../reducers/auth";
 import "./styles.css"
 
 
-var mock = new MockAdapter(axios);
-
-export const client = axios.create({
-    baseURL:'/login'
-});
-
-mock.onPost('/login').reply((response) => {
-    const data = JSON.parse(response.data)
-    if(data.username === 'admin' && data.password === 'admin') {
-        return ([200, { message: console.log('hi') } ]);
-    } else {
-        return([500, { success: false } ]);
+class LoginForm extends React.Component {
+    state = {
+        username: '',
+        password: ''
     }
-}); 
 
+    handleSubmit = () => {
+        const { username, password}  = this.state
+
+        this.props.onLogin(username, password)
+    }
+    render() {
+
+        return <form className="homePage__form">
+                <Label text="User:" className="form__label" />
+                <RequiredField />
+                <input type="text" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})} className="form__input"/>
+                <Label text="Password:" />
+                <RequiredField />
+                <input type="text" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})} className="form__input"/>
+                <input type="button" onClick={this.handleSubmit} />
+        </form>
+            
+    }
+}
 
 const LoginPage = ({ dispatch, history }) => {
-    let username; 
-    let password;
 
     return (
         <div>
@@ -41,28 +47,7 @@ const LoginPage = ({ dispatch, history }) => {
                         className = "img homePage__img"
                     />
                 </div>
-                <form className="homePage__form">
-                        <Label text="User:" className="form__label" />
-                        <RequiredField />
-                        <input type="text" ref={node => (username = node)} className="form__input"/>
-                        <Label text="Password:" />
-                        <RequiredField />
-                        <input type="password" ref={node => (password = node)}  className="form__input"/>
-                        <PrimaryButton btnValue="Sign in" 
-                            onClick={() => {
-                                dispatch(checkAuth(username.value, password.value))
-                                axios
-                                    .post('/login', {username: username.value, password: password.value})
-                                    .then(() => {
-                                        history.push('/accounts')
-                                    })
-                                    .catch((error) => {
-                                        console.log(error)
-                                    })
-                            }}/>
-                            
-                </form>
-                
+                <LoginForm onLogin={(username, password) => console.log(username,password)}/>
             </div>
         </div>
     )

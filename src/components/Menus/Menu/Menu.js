@@ -8,7 +8,7 @@ const text = ["individual clients", "corporate clients", "contacts", "about us",
 const Menu = () => (
     <ul>
         <li><Logo src={require('../../../images/logo.png')} to="/login" alt="logo"/> </li>
-        <Link to="#" links = {text} className="link"/>
+        <li><Link to="#" links = {text} className="link"/></li>
     </ul>
 );
 

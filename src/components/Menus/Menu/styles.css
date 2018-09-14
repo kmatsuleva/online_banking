@@ -12,6 +12,11 @@
        padding-top: 7px;
        padding-left: 20px;
     }
+
+    li {
+       flex-direction: column;
+
+    }
 } 
 
 
