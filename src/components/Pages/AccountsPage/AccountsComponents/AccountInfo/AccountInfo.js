@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import styles from "./styles";
 
 
-const AccountInfo = ({ title, currency, onClick }) => (
+const AccountInfo = ({ title, balance, currency, onClick }) => (
     <div style={styles.accountsList}>
         <div style={styles.wrapper}>
             <div style={styles.account}>{ title }</div>
-            <div style={styles.balance}> 0 {currency} </div>
+            <div style={styles.balance}> {balance} {currency} </div>
             <div style={styles.icon_delete}>
                 <button style={styles.button} onClick={onClick}> 
                     <img 

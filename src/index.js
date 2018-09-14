@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import App from "./App";
 import rootReducer from "./store/reducers";
 import axiosMiddleware from 'redux-axios-middleware';
-import { client } from "./components/Pages/HomePage/HomePage"
+import { client } from "./components/Pages/LoginPage/LoginPage"
 
 export const store = createStore(
   rootReducer,

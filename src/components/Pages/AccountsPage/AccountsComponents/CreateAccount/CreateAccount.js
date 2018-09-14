@@ -7,16 +7,20 @@ import styles from "./styles"
 
 const CreateAccount = ({ dispatch }) => {
   let account;
-  let option;
+  let balance;
+  let currency;
+
 
   return (
     <div>
       <form>
         <Label text="Account:" style={labelStyles} />
         <input type="text" ref={node => (account = node)} style={styles.input} />
+        <Label text="Balance:" style={labelStyles} />
+        <input type="text" ref={node => (balance = node)} style={styles.input__balance} placeholder="e.g 500"/>
         <Label text="Currency:" style={labelStyles}/>
         
-        <select ref={node => (option = node)} style={styles.currency}>
+        <select ref={node => (currency = node)} style={styles.currency}>
           <option>BGN</option>
           <option>USD</option>
           <option>EUR</option>
@@ -27,11 +31,12 @@ const CreateAccount = ({ dispatch }) => {
             btnValue="Create"
             onClick={e => {
             e.preventDefault();
-            if (!account.value.trim()) {
+            if(!account.value.match(/^[BG]*[0-9]{2}[BUIN]*[0-9]{14}$/) || !balance.value || !parseFloat(balance.value)) {
               return;
             }
-            dispatch(createAccount(account.value, option.value));
+            dispatch(createAccount(account.value, balance.value, currency.value));
             account.value = "";
+            balance.value = ""
           }}/>
         </span>
 

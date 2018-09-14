@@ -2,11 +2,12 @@ const CREATE_BANK_ACCOUNT = 'CREATE_BANK_ACCOUNT';
 const DELETE_BANK_ACCOUNT = 'DELETE_BANK_ACCOUNT';
 
 let nextAccountsId = 0;
-export const createAccount = (title, currency) => ({
-  type: CREATE_BANK_ACCOUNT,
-  id: nextAccountsId++,
-  title,
-  currency
+export const createAccount = (title, balance, currency) => ({
+    type: CREATE_BANK_ACCOUNT,
+    id: nextAccountsId++,
+    title,
+    balance,
+    currency
 });
 
 export const deleteAccount = id => ({
@@ -22,6 +23,7 @@ export default (state = [], action) => {
         {
           id: action.id,
           title: action.title,
+          balance: action.balance,
           currency: action.currency
         }
       ];
