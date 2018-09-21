@@ -12,7 +12,15 @@ class CreateAccount extends React.Component {
         balance: '',
         currency: 'BGN'
       };
+
+      this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  handleSubmit() {
+    const { bankAccount, balance, currency }  = this.state;
+    this.props.createAccount(bankAccount, balance, currency)
+    
+}
   
   render() {
 
@@ -40,10 +48,7 @@ class CreateAccount extends React.Component {
               <span className="button">
                 <PrimaryButton
                   value="Create"
-                  onClick={e => {
-                      e.preventDefault();
-                      this.props.createAccount(this.state.bankAccount, this.state.balance, this.state.currency);
-                    }}
+                  onClick={this.handleSubmit}
                 />
               </span>
             </form>

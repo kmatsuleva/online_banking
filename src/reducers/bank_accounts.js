@@ -7,7 +7,6 @@ const GET_BANK_ACCOUNT_SUCCESS = 'GET_BANK_ACCOUNT_SUCCESS';
 let nextAccountsId = 0;
 
 export const createAccount = (title, balance, currency) => { 
-  console.log('i am in action "create account" ')
   return {
     type: CREATE_BANK_ACCOUNT,
     payload: {
@@ -31,7 +30,6 @@ export const deleteAccount = id => ({
 });
 
 export const getAllAccounts = (title, balance, currency) => {
-  console.log('i am in action "get accounts" ')
   return {
     type: GET_BANK_ACCOUNT,
     payload: {
