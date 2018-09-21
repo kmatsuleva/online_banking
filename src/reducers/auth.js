@@ -3,9 +3,7 @@ const AUTH_LOGIN_SUCCESS = 'AUTH_LOGIN_SUCCESS'
 const AUTH_LOGIN_FAILURE = 'AUTH_LOGIN_FAILURE'
 
 export const checkAuth = (username, password) => {
-  if(!username === 'admin' && !password === 'admin') {
-        return;
-  }
+  console.log('auth')
   return {
     type: AUTH_LOGIN,
     payload: {
@@ -23,6 +21,7 @@ export const checkAuth = (username, password) => {
 
 
 export default (state = { loggedIn: false }, action) => {
+  console.log(action)
   switch (action.type) {
     case AUTH_LOGIN_SUCCESS:
       return {

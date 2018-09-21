@@ -49,6 +49,6 @@ if (process.env.NODE_ENV === 'development') {
 
 
     mock.onPost('/accounts').reply(() => {
-        return ([200, [{ message: console.log('new account') }]])
+        return ([200, [{ message: console.log('new account are created') }]])
       })
 } 

@@ -17,10 +17,10 @@ class LoginForm extends React.Component {
  
     handleSubmit() {
         const { username, password}  = this.state;
-        this.props.onLogin(username, password)
-        if(this.state.username === 'admin' && this.state.password === 'admin') {
-            this.refs.btn.setAttribute("disabled", "disabled");
-        }
+        this.props.checkAuth(username, password)
+        // if(this.state.username === 'admin' && this.state.password === 'admin') {
+        //     this.refs.btn.setAttribute("disabled", "disabled");
+        // }
     }
     render() {
 
