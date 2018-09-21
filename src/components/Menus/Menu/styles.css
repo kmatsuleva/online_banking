@@ -1,47 +1,123 @@
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 700px) {
     ul {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+        min-width: 200px;
+    }
+     
+    .link {
+        display: flex;
+        font-size: 16px;
+        font-family: Roboto, Arial, sans-serif;
+        text-transform: uppercase;
+        color: #585858;
+        text-decoration: none;
+        justify-content: center;
     }
 
-    .link {
-       display: flex;
-       flex-direction: column;
-       font-size: 15px;
-       padding-bottom: 8px;
-       padding-top: 7px;
-       padding-left: 20px;
+    .logo {
+        display: flex;
+        justify-content: center;
     }
 
     li {
-       flex-direction: column;
+        padding-top: 7px;
+        padding-bottom: 8px;
+        justify-content: center;
+    }
 
+    .image {
+        width: 150px
     }
 } 
 
 
 @media only screen and (min-width: 700px) {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-left: 0;
+    }
+     
     .link {
-        font-size: 19px;
-        padding: 22px 15px 22px 47px;
+        display: flex;
+        font-size: 17px;
+        font-family: Roboto, Arial, sans-serif;
+        text-transform: uppercase;
+        color: #585858;
+        text-decoration: none;
+        justify-content: center;
+        padding-top: 13px;
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        padding-left: 5px
+    }
+
+    li {
+        padding-top: 7px;
+        padding-bottom: 8px;
+        padding: 7px 10px;
+    }
+
+    .image {
+        width: 185px
     }
 }
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #f4f4f4;
-    padding: 15px 63px 15px 35px;
-    margin: 0;
-    align-items: center;
-    vertical-align: baseline;
-    list-style-type: none;
+
+
+@media only screen and (min-width: 992px) {
+    ul {
+        text-decoration: none;
+        list-style-type: none;
+        background-color: #f4f4f4;
+        padding: 12px 15px 12px 5px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+     
+    .link {
+        font-size: 19px;
+        font-family: Roboto, Arial, sans-serif;
+        text-transform: uppercase;
+        color: #585858;
+        text-decoration: none;
+        padding: 18px;
+    }
+    
+    .logo {
+        vertical-align: baseline;
+        margin-left: 10px;
+    }
+
+    .image {
+        width: 250px
+    }
+    
 }
 
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+ 
 .link {
-    font-size: 19px;
     font-family: Roboto, Arial, sans-serif;
     text-transform: uppercase;
     color: #585858;
     text-decoration: none;
 }
 
+.logo {
+    vertical-align: baseline
+}

@@ -8,7 +8,6 @@ exports[`< Logo /> should render correctly 1`] = `
     href="/"
   >
     <img
-      className="image"
       src="../../image.png"
     />
   </a>

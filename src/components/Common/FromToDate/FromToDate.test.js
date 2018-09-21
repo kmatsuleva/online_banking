@@ -4,7 +4,6 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
-
 import FromToDate from "./FromToDate"
 import Label from "../Label/Label"  
 import InputTypeDate from "../InputTypeDate/InputTypeDate"  

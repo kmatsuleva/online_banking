@@ -16,16 +16,10 @@ describe("< PrimaryButton />", () => {
     });
     
     it('should handle the click event', () => {
-        window.alert = jest.fn();
-        const handleClick = () => {
-            alert('clicked');
-        };
-        const output = shallow(
-        <PrimaryButton btnVlue="mockValue" to="mockTo"
-                onClick = {handleClick()}/>
-        );
-        output.simulate('click');
-        expect(window.alert).toHaveBeenCalledWith('clicked');
+        const callback = jest.fn();
+        const wrapper = shallow(<PrimaryButton onClick={callback}/>);
+        wrapper.simulate('click');
+        expect(callback).toHaveBeenCalled();
     });
 
     it('should render correctly', () => {
@@ -33,7 +27,7 @@ describe("< PrimaryButton />", () => {
             alert('clicked');
         };
         const output = shallow(
-        <PrimaryButton btnVlue="mockValue" to="mockTo"
+        <PrimaryButton value="mockValue"
                 onClick = {handleClick()}/>
         );
         expect(shallowToJson(output)).toMatchSnapshot();

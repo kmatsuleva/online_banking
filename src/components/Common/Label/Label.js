@@ -11,13 +11,5 @@ Label.propTypes = {
 };
 
 
-// Label.defaultProps = {
-//   style: {
-//       fontSize: 18,
-//       color: "#4a4a4a",
-//       fontFamily: "Roboto, Arial, sans-serif"
-//   }
-// }
-
 
 export default Label;

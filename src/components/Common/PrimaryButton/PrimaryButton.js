@@ -1,19 +1,15 @@
 import React from "react";
 import PropTypes from 'prop-types';     
 
-const PrimaryButton = ({ btnValue, to, onClick, btnStyle, linkInButton }) => (
-  <button type = "submit" style={btnStyle} onClick = {onClick}>
-    <a href={to} style={linkInButton}> {btnValue} </a>
-  </button>
+const PrimaryButton = ({ value, onClick, btnStyle, ref, disabled}) => (
+  <input type = "button" value = {value} onClick = {onClick} style={btnStyle} ref={ref} disabled={disabled}/>
 );
 
 
 PrimaryButton.propTypes = {
-  btnValue: PropTypes.string,
-  to: PropTypes.string,
+  value: PropTypes.string,
   onClick: PropTypes.func,
-  btnStyle: PropTypes.object,
-  linkInButton: PropTypes.object
+  btnStyle: PropTypes.object
 }
 
 PrimaryButton.defaultProps = {
@@ -28,13 +24,9 @@ PrimaryButton.defaultProps = {
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 16,
-    fontFamily: "Roboto, Arial, sans-serif"
-},
-
-  linkInButton: {
-      color: "white",
-      textDecoration: "none"
-  }
+    fontFamily: "Roboto, Arial, sans-serif",
+    color: "white"
+  } 
 };
 
 

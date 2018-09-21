@@ -1,6 +1,6 @@
 
 @media only screen and (max-width: 992px) {
-    form {
+    .createForm {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
@@ -17,11 +17,16 @@
         color: #15517d;
         font-family: Roboto, Arial, sans-serif;
         margin-bottom: 8px;
-        padding: 0 10px;
+        /* padding: 0 10px; */
     }
 
-    .input, .input__balance, .currency {
-        margin-left: 30px
+
+    .input {
+        min-width: 160px
+    }
+    
+    .input__balance {
+        width: 100px
     }
 }
 
