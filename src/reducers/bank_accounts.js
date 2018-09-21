@@ -11,7 +11,7 @@ export const createAccount = (title, balance, currency) => {
   return {
     type: CREATE_BANK_ACCOUNT,
     payload: {
-      request:{
+      request: {
         method: 'post',
         url:'/accounts',
         params: {

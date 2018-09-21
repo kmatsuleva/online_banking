@@ -49,7 +49,7 @@ class CreateAccount extends React.Component {
             </form>
 
             <div>
-              {this.props.accounts &&this.props.accounts.map(account =>
+              {this.props.accounts && this.props.accounts.map(account =>
                 <AccountInfo
                   {...account}
                   onClick={() => this.props.deleteAccount(account.id)}

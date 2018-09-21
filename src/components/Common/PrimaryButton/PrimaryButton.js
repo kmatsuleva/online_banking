@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';     
 
-const PrimaryButton = ({ value, onClick, btnStyle, ref, disabled}) => (
-  <input type = "button" value = {value} onClick = {onClick} style={btnStyle} ref={ref} disabled={disabled}/>
+const PrimaryButton = ({ value, onClick, btnStyle, disabled}) => (
+  <input type = "button" value = {value} onClick = {onClick} disabled={disabled} style={btnStyle}/>
 );
 
 

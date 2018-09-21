@@ -6,7 +6,7 @@ import { shallow } from 'enzyme';
 
 import AccountsPage from "./AccountsPage"
 import OnlineBankingMenu from "../../Menus/OnlineBankingMenu/OnlineBankingMenu";
-import CreateAccount from "./AccountsComponents/CreateAccount/CreateAccount"
+import CreateAccountContainer from "../../../containers/CreateAccountContainer"
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -22,9 +22,9 @@ describe("< AccountsPage />", () => {
         expect(wrapper.find(OnlineBankingMenu).length).toEqual(1);
     });
 
-    it("renders one <CreateAccount /> component", () => {
+    it("renders one <CreateAccountContainer /> component", () => {
         const wrapper = shallow(<AccountsPage />);
-        expect(wrapper.find(CreateAccount).length).toEqual(1);
+        expect(wrapper.find(CreateAccountContainer).length).toEqual(1);
     });
 })
 
