@@ -1,7 +1,7 @@
 // import axios from "axios";
 // import MockAdapter from "axios-mock-adapter";
 
-
+// export const client = axios.create();
 
 // const mock = new MockAdapter(axios)
 
@@ -19,7 +19,7 @@
 //     }); 
 
 //     mock.onGet('/accounts').reply( () => {
-//         console.log('i am in a mock')
+//         console.log('i am in a mock2')
 //         return (
 //             [
 //                 200, {
@@ -50,10 +50,16 @@
 //         )
 //     });
 
-
 //     mock.onPost('/accounts').reply(() => {
 //         return ([200, { message: console.log('tratarta') }])
 //       })
+
 // } else {
 //     mock.restore()
+// }
+
+
+
+// export default (axiosClient) => {
+//     axiosClient = axios.create();
 // }

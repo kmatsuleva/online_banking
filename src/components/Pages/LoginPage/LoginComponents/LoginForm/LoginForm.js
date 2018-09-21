@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
     render() {
 
         return (
-        <form>
+        <form className="loginForm">
                     <Label text="User:" className="form__label" />
                     <RequiredField />
                     <input type="text" value={this.state.username} onChange={(e) => this.setState({username: e.target.value})} className="form__input"/>

@@ -7,12 +7,12 @@ import MockAdapter from "axios-mock-adapter";
 
 export const client = axios.create();
 
-const mock = new MockAdapter(axios)
-
 if (process.env.NODE_ENV === 'development') {
+    const mock = new MockAdapter(axios)
+
     console.log('DEVELOPMENT BUILD')
 
-    mock.onPost('/login').reply((response) => {
+    mock.onPost(/\/v1\/login/).reply((response) => {
         console.log('i am in a mock')
         const data = JSON.parse(response.data)
         if(data.username === 'admin' && data.password === 'admin') {
@@ -58,10 +58,7 @@ if (process.env.NODE_ENV === 'development') {
     mock.onPost('/accounts').reply(() => {
         return ([200, { message: console.log('tratarta') }])
       })
-} else {
-    mock.restore()
-}
-
+} 
 
 
  export default () => {
