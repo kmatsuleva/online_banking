@@ -1,6 +1,6 @@
 import React from "react";
 import OnlineBankingMenu from "../../Menus/OnlineBankingMenu/OnlineBankingMenu";
-import styles from "./styles"
+import "./styles.css"
 import CreateAccountContainer from "../../../containers/CreateAccountContainer";
 
 class AccountsPage extends React.Component {
@@ -12,9 +12,9 @@ class AccountsPage extends React.Component {
 
     render() {
       return (
-        <div>
+        <div >
             <OnlineBankingMenu />
-            <div style={styles.container}>
+            <div>
                 <CreateAccountContainer />
             </div> 
         </div>

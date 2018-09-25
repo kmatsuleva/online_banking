@@ -26,7 +26,8 @@ class CreateAccount extends React.Component {
 
       return (
         <div>
-          <form className="createForm">
+          <div className="form">
+           <form className="createForm">
               <Label text="Account:" className="label" />
               <input type="text" value={this.state.bankAccount} onChange={(e) => this.setState({bankAccount: e.target.value})} className="input"/>
               
@@ -49,9 +50,11 @@ class CreateAccount extends React.Component {
                 <PrimaryButton
                   value="Create"
                   onClick={this.handleSubmit}
+                  className = "button"
                 />
               </span>
             </form>
+            </div>
 
             <div>
               {this.props.accounts && this.props.accounts.map(account =>

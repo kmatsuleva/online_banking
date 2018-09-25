@@ -3,15 +3,13 @@ import axiosMiddleware from 'redux-axios-middleware';
 import rootReducer from './reducers'
 import axios from "axios";
 import "../mocks"
+import reducer from "./reducers"
+
 
  export default () => {
-    const store = createStore(
-        rootReducer,
-        applyMiddleware(
-          axiosMiddleware(axios)
-        )
-      );
-      
+  const store = (window.devToolsExtension
+    ? window.devToolsExtension()(createStore)
+    : createStore)(reducer);
     return store
       
 }  

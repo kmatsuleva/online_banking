@@ -5,15 +5,15 @@ import MockAdapter from "axios-mock-adapter";
 if (process.env.NODE_ENV === 'development') {
     const mock = new MockAdapter(axios)
 
-    mock.onPost('/login').reply((response) => {
-        console.log('i am in a mock1')
-        const data = JSON.parse(response.data)
-        if(data.username === 'admin' && data.password === 'admin') {
-            return ([200, { message: console.log('hi') } ]);
-        } else {
-            return([500, { success: false } ]);
-        }
-    }); 
+    // mock.onPost('/login').reply((response) => {
+    //     console.log('i am in a mock1')
+    //     const data = JSON.parse(response.data)
+    //     if(data.username === 'admin' && data.password === 'admin') {
+    //         return ([200, { message: console.log('hi') } ]);
+    //     } else {
+    //         return([500, { success: false } ]);
+    //     }
+    // }); 
 
     mock.onGet('/accounts').reply( () => {
         console.log('i am in a mock2')

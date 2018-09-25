@@ -13,7 +13,7 @@ export const createAccount = (title, balance, currency) => {
       request: {
         method: 'post',
         url:'/accounts',
-        params: {
+        data: {
           id: nextAccountsId++,
           title,
           balance,
@@ -47,14 +47,14 @@ export const getAllAccounts = (title, balance, currency) => {
 
 
 export default (state = [], action) => {
-  console.log(action)
+  
   switch (action.type) {
     case CREATE_BANK_ACCOUNT_SUCCESS:
       return [
         ...state,
         {
           url: action.payload.url,
-          params: action.payload.params
+          params: action.params
         }
       ];
 

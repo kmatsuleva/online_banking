@@ -1,8 +1,8 @@
 import React from "react";
 import Menu from "../../Menus/Menu/Menu";
-import history from '../../../history';
+import AsyncValidationForm from "./LoginComponents/AsyncValidationForm/AsyncValidationForm";
+import checkInputs from "./LoginComponents/AsyncValidationForm/asyncValidate"
 import "./styles.css"
-import LoginFormContainer from "../../../containers/LoginFormContainer";
 
 
 const LoginPage = () => {
@@ -18,7 +18,9 @@ const LoginPage = () => {
                         className = "img homePage__img"
                     />
                 </div>
-                <LoginFormContainer />
+                <div style={{ padding: 15 }}>
+                    <AsyncValidationForm onSubmit={checkInputs} />
+                </div>
             </div>
         </div>
     )
