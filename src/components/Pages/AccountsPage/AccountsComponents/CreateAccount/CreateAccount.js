@@ -28,9 +28,10 @@ class CreateAccount extends React.Component {
         <div>
           <div className="form">
            <form className="createForm">
-              <Label text="Account:" className="label" />
-              <input type="text" value={this.state.bankAccount} onChange={(e) => this.setState({bankAccount: e.target.value})} className="input"/>
-              
+              <div className="title">
+                <Label text="Account:" className="label" />
+                <input type="text" value={this.state.bankAccount} onChange={(e) => this.setState({bankAccount: e.target.value})} className="input"/>
+              </div>
               <div className="balance">
                 <Label text="Balance:" className="label" />
                 <input type="text" value={this.state.balance} onChange={(e) => this.setState({balance: e.target.value})}  className="input__balance" placeholder="e.g 500"/>
@@ -46,13 +47,12 @@ class CreateAccount extends React.Component {
                 </select>
               </div>
 
-              <span className="button">
+              
                 <PrimaryButton
                   value="Create"
                   onClick={this.handleSubmit}
                   className = "button"
                 />
-              </span>
             </form>
             </div>
 
