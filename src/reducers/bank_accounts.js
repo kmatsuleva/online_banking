@@ -36,7 +36,8 @@ export const getAllAccounts = (title, balance, currency) => {
       request:{
         method: 'get',
         url:'/accounts',
-        params: {
+        data: {
+          id: nextAccountsId++,
           title,
           balance,
           currency
@@ -50,11 +51,11 @@ export default (state = [], action) => {
   
   switch (action.type) {
     case CREATE_BANK_ACCOUNT_SUCCESS:
+    console.log(state)
       return [
         ...state,
         {
-          url: action.payload.url,
-          params: action.params
+          title: action.payload.data
         }
       ];
 
@@ -62,8 +63,10 @@ export default (state = [], action) => {
       return [
         ...state,
         {
-          url: action.payload.url,
-          params: action.payload.params
+          title: action.payload.data.data[0].title,
+          balance: action.payload.data.data[0].balance,
+          currency: action.payload.data.data[0].currency
+
         }
       ];
     
@@ -74,3 +77,4 @@ export default (state = [], action) => {
       return state;
   }
 };
+

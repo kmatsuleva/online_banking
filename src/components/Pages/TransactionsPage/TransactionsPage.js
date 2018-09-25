@@ -14,7 +14,7 @@ const headers = [ "date and time", "account", "operation", "amount"];
 const items = ["test1", "test2", "test3", "test4"];
 
 
-const TransactionPage = () => (
+const TransactionsPage = () => (
     <div>
         <OnlineBankingMenu />
             <div style={styles.container}>
@@ -45,5 +45,5 @@ const labelStyles = {
     padding: "0 30px"
 };
 
-export default TransactionPage;
+export default TransactionsPage;
  

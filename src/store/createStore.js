@@ -1,8 +1,4 @@
-import { createStore, applyMiddleware } from "redux";
-import axiosMiddleware from 'redux-axios-middleware';
-import rootReducer from './reducers'
-import axios from "axios";
-import "../mocks"
+import { createStore } from "redux";
 import reducer from "./reducers"
 
 
@@ -13,3 +9,4 @@ import reducer from "./reducers"
     return store
       
 }  
+

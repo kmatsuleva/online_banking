@@ -111,7 +111,9 @@
     color: white;
 }
 
-.loginForm>div>div>span {
+.loginForm > div > div > span {
     border: none;
-    color: #700;
+    color: #bb5252;
+    font-size: 18px;
+    padding-bottom: 10px;
 }

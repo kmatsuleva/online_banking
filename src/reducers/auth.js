@@ -21,18 +21,17 @@ export const checkAuth = (username, password) => {
 
 
 export default (state = { loggedIn: false }, action) => {
-  console.log(action)
   switch (action.type) {
     case AUTH_LOGIN_SUCCESS:
       return {
-        loggedIn: !state.loggedIn,
+        loggedIn: true,
         url: action.payload.url,
         data: action.payload.data
       };  
       
     case AUTH_LOGIN_FAILURE:
       return {
-        loggedIn: state.loggedIn
+        loggedIn: false
       }
     default:
       return state
