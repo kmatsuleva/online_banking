@@ -1,9 +1,9 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import validate from './validate';
+import validate from '../../../../../formValidation/validate';
 import "./styles.css"
 import RequiredField from '../../../../Common/RequiredField/RequiredField';
-import asyncValidate from './asyncValidate'
+import asyncValidate from '../../../../../formValidation/asyncValidate'
 
 
 const renderField = (

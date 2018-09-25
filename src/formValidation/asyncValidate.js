@@ -1,4 +1,4 @@
-import history from '../../../../../history'
+import history from '../history'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 

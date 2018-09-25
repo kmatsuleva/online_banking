@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "../../Menus/Menu/Menu";
 import AsyncValidationForm from "./LoginComponents/AsyncValidationForm/AsyncValidationForm";
-import checkInputs from "./LoginComponents/AsyncValidationForm/asyncValidate"
+import checkInputs from "../../../formValidation/asyncValidate"
 import "./styles.css"
 
 
