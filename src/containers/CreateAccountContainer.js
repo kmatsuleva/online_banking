@@ -5,7 +5,6 @@ import CreateAccount from "../components/Pages/AccountsPage/AccountsComponents/C
 
 const mapStateToProps = state => ({
   accounts: state.accounts
-  // accounts: state.accounts.account
 });
 
 

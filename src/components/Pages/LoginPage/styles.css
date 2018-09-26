@@ -11,6 +11,13 @@
         margin-top: 28px;
         margin-left: 20px
     }
+
+    .login {
+        display: flex;
+        justify-content: center;
+        max-width: 270px;
+        margin-left: 20px;
+    }
     
 } 
 

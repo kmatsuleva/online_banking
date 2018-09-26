@@ -1,47 +1,9 @@
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
     .form {
         display: flex;
         justify-content: center;
         min-width: 400px;
-        padding-top: 70px;
-      
-    }
-
- 
-    .label {
-        font-size: 16px;
-        margin-bottom: 8px;
-        padding: 0;
-        padding-right: 10px;
-    }
-
-
-    .input {
-        min-width: 160px
-    }
-    
-    .input__balance {
-        width: 100px
-    }
-
-    .balance, .currency {
-        display: flex;
-        align-items: baseline
-    }
-
-
-    .button {
-        width: 90px
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .form {
-        display: flex;
-        justify-content: center;
-        min-width: 400px;
-        padding-top: 70px;
+        padding-top: 50px;
       
     }
 
@@ -55,7 +17,7 @@
         align-items: flex-start;
         flex-direction: column;
         justify-content: center;
-        min-width: 282px;
+        min-width: 355px;
         padding: 35px 35px 30px 30px
     }
 
@@ -70,21 +32,24 @@
 
 
     .input {
-        min-width: 160px
+        min-width: 160px;
     }
     
     .input__balance {
-        width: 100px
-    }
-
-    .balance, .currency {
-        display: flex;
-        align-items: baseline
+        width: 100px;
+        margin-right: 20px;
     }
 
     .button {
-        width: 100px;
+        width: 100%;
+        padding-top: 15px;
     }
+
+    .balance_currency {
+        display: flex;
+        align-items: baseline;
+    }
+
 
 }
 
@@ -152,15 +117,13 @@
 
 .dropdown {
     border: 1px solid #d2d2d2;
-    padding: 18px 10px;
-    margin-top: 8px;
-    margin-bottom: 25px;
     border-radius: 3px;
     font-size: 16px;
     color: #4a4a4a;
     background-color: white;
     box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
     font-family: Roboto, Arial, sans-serif;
+    height: 36px;
 }
 
 

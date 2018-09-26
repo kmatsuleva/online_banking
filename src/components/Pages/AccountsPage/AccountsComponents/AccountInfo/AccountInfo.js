@@ -1,15 +1,15 @@
 import React from "react"
 import PropTypes from 'prop-types'
-import styles from "./styles";
+import "./styles.css"
 
 
 const AccountInfo = ({ title, balance, currency, onClick }) => (
-    <div style={styles.accountsList}>
-        <div style={styles.wrapper}>
-            <div style={styles.account}>{ title }</div>
-            <div style={styles.balance}> {balance} {currency} </div>
-            <div style={styles.icon_delete}>
-                <button style={styles.button} onClick={onClick}> 
+    <div className="accountsList">
+        <div className="wrapper">
+            <div className = "account">{ title }</div>
+            <div className = "balance"> {balance} {currency} </div>
+            <div className = "icon_delete">
+                <button className = "button" onClick={onClick}> 
                     <img 
                         src={require('../../../../../icons/delete.png')}
                         alt = "delete" />
@@ -22,7 +22,10 @@ const AccountInfo = ({ title, balance, currency, onClick }) => (
 
 
 AccountInfo.propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    balance: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
 }
 
   

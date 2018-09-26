@@ -18,7 +18,7 @@ const LoginPage = () => {
                         className = "img homePage__img"
                     />
                 </div>
-                <div style={{ padding: 15 }}>
+                <div className="login">
                     <AsyncValidationForm onSubmit={checkInputs} />
                 </div>
             </div>
