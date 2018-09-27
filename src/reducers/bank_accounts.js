@@ -26,19 +26,12 @@ export const createAccount = (title, balance, currency) => {
 }
 
 
-export const getAllAccounts = (title, balance, currency) => {
+export const getAllAccounts = () => {
   return {
     type: GET_BANK_ACCOUNT,
     payload: {
-      request:{
-        method: 'get',
-        url:'/accounts',
-        data: {
-          id: nextAccountsId++,
-          title,
-          balance,
-          currency
-        }
+      request: { 
+        url:'/accounts'
       }
     }
 }}
@@ -61,8 +54,6 @@ export const deleteAccount = id => {
 export default (state = [], action) => {
   switch (action.type) {
     case CREATE_BANK_ACCOUNT_SUCCESS:
-    console.log(action.payload.data.id)
-
       return [
         ...state,
         {
@@ -72,25 +63,15 @@ export default (state = [], action) => {
         }
       ];
 
+    
     case GET_BANK_ACCOUNT_SUCCESS:
-      return [
-        ...state,
-        {
-          // title: action.payload.data.title,
-          // balance: action.payload.data.balance,
-          // currency: action.payload.data.currency
-
-          title: action.payload.data.data[0].title,
-          balance: action.payload.data.data[0].balance,
-          currency: action.payload.data.data[0].currency
-
-        }
-      ];
+    console.log(action)
+      return action.payload.data;
     
 
     case DELETE_BANK_ACCOUNT_SUCCESS:
     console.log(action.payload.data)    
-      return state.filter(({ id }) => id !== action.payload.id);
+      return state.filter(({ data }) => data !== action.payload.data);
     default:
       return state;
   }

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
     .onlineMenu {
         display: flex;
         flex-direction: column;
@@ -28,7 +28,7 @@
 } 
 
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 750px) {
     .onlineMenu {
         display: flex;
         align-items: center;

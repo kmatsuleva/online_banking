@@ -9,7 +9,7 @@ const AccountInfo = ({ title, balance, currency, onClick }) => (
             <div className = "account">{ title }</div>
             <div className = "balance"> {balance} {currency} </div>
             <div className = "icon_delete">
-                <button className = "button" onClick={onClick}> 
+                <button className = "delete_button" onClick={onClick}> 
                     <img 
                         src={require('../../../../../icons/delete.png')}
                         alt = "delete" />

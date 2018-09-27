@@ -1,15 +1,20 @@
 import { connect } from "react-redux";
 import { getAllAccounts } from '../reducers/bank_accounts'
+import { deleteAccount } from '../reducers/bank_accounts'
+import { createAccount } from '../reducers/bank_accounts'
+
+
 import AccountsPage from "../components/Pages/AccountsPage/AccountsPage";
 
-const mapStateToProps = (state) => ({
-  title: state.accounts.title, 
-  balance: state.accounts.balance, 
-  currency: state.accounts.currency
+const mapStateToProps = state => ({
+  accounts: state.accounts
 });
 
+
 const mapDispatchToProps = {
-  getAllAccounts
+  getAllAccounts,
+  deleteAccount, 
+  createAccount
 }
 
 export default connect(

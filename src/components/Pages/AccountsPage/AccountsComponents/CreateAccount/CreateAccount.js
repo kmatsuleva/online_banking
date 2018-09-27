@@ -1,8 +1,8 @@
 import React from "react";
 import PrimaryButton from "../../../../Common/PrimaryButton/PrimaryButton"
 import Label from "../../../../Common/Label/Label";
-import "./styles.css"
 import AccountInfo from '../AccountInfo/AccountInfo'
+import "./styles.css"
 
 class CreateAccount extends React.Component {
   constructor(props) {
@@ -13,14 +13,14 @@ class CreateAccount extends React.Component {
         currency: 'BGN'
       };
 
-      this.handleSubmit = this.handleSubmit.bind(this);
+//       this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit() {
-    const { bankAccount, balance, currency }  = this.state;
-    this.props.createAccount(bankAccount, balance, currency)
+//   handleSubmit() {
+//     const { bankAccount, balance, currency }  = this.state;
+//     this.props.createAccount(bankAccount, balance, currency)
     
-}
+// }
   
   render() {
 
@@ -45,25 +45,25 @@ class CreateAccount extends React.Component {
                 </select>
               </div>
 
-              
                 <PrimaryButton
                   value="Create"
-                  onClick={this.handleSubmit}
+                  onClick={this.props.onClick}
                   className = "button"
                 />
             </form>
             </div>
 
-            <div>
+            {/* <div>
               {this.props.accounts && this.props.accounts.map(account =>
                 <AccountInfo
                   {...account}
                   onClick={() => this.props.deleteAccount(account.id)}
                 />
               )}
-            </div>
+            </div> */}
         </div>
       );
+    
   }
 };
 

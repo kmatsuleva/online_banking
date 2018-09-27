@@ -1,11 +1,22 @@
 @media only screen and (max-width: 600px) {
- 
 
    .account, .balance {
        font-size: 17px;
    }
 
+   .wrapper {
+       width: 367px;
+   }
+
 }
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+
+    .account, .balance {
+        font-size: 18px;
+    }
+}
+
 
 
 @media only screen and (min-width: 992px) {
@@ -15,10 +26,12 @@
 
     .account {
         min-width: 300px;
+        font-size: 18px;
     }
 
     .balance {
         min-width: 150px;
+        font-size: 18px;
     }
  }
 
@@ -47,7 +60,6 @@
     height: 44px;
     padding-left: 15px;
     padding-right: 15px;
-    font-size: 18px;
     font-family: Roboto, Arial, sans-serif;
     color: rgb(88, 88, 88)
 }
@@ -57,7 +69,6 @@
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 18px;
     font-family: Roboto, Arial, sans-serif;
     color: rgb(88, 88, 88)
 }
@@ -72,4 +83,10 @@
     background: transparent;
     border: none; 
     padding: 0
+}
+
+.delete_button {
+    background: transparent;
+    border: none;
+    padding: 0;
 }
