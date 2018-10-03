@@ -41,10 +41,12 @@ export const deleteAccount = id => {
   return {
     type: DELETE_BANK_ACCOUNT,
     payload: {
-      request:{
+      request: {
         method: 'delete',
         url: '/accounts',
-        data: id
+        data: {
+          id
+        }
       }
     }
   }
@@ -62,15 +64,14 @@ export default (state = [], action) => {
           currency: action.payload.data.currency
         }
       ];
-
+     
     
     case GET_BANK_ACCOUNT_SUCCESS:
       return action.payload.data;
     
-
-    case DELETE_BANK_ACCOUNT_SUCCESS:
-    console.log(action.payload.data)    
-      return state.filter(({ data }) => data !== action.payload.data);
+    case DELETE_BANK_ACCOUNT_SUCCESS:  
+      return state.filter(({ id }) => id !== action.payload.data.id);
+      
     default:
       return state;
   }

@@ -30,10 +30,13 @@ if (process.env.NODE_ENV === 'development') {
 
     .onPost('/accounts').reply(config => {
         const data = JSON.parse(config.data)
-        return [201, data];
+        // if(data.title.match(/^[BG]*[0-9]{2}[BUIN]*[0-9]{14}$/)) {
+            return [201, data];
+        // }
     })
 
-    .onDelete('/accounts').reply(() => {
-        return [204, console.log('delete')];
+    .onDelete('/accounts').reply((config) => {
+        const data = JSON.parse(config.data)
+        return [204, data];
     })
 } 
