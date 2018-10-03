@@ -65,7 +65,6 @@ export default (state = [], action) => {
 
     
     case GET_BANK_ACCOUNT_SUCCESS:
-    console.log(action)
       return action.payload.data;
     
 
