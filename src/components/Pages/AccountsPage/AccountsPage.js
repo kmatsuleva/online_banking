@@ -6,7 +6,7 @@ import CreateAccount from "./AccountsComponents/CreateAccount/CreateAccount";
 
 class AccountsPage extends React.Component {
     
-    componentDidMount(){
+    componentDidMount() {
         this.props.getAllAccounts();
     }
 
@@ -17,15 +17,17 @@ class AccountsPage extends React.Component {
             <div>
                 <div>
                     <CreateAccount createAccount = {(title, balance, currency) => {
-                        // if(!title.match(/^[BG]*[0-9]{2}[BUIN]*[0-9]{14}$/)) {
-                        //     alert('Incorrect account name format ')
-                        // }
-                        // else {
-                        //    this.props.createAccount(title, balance, currency)
-                        // }}
-                        this.props.createAccount(title, balance, currency)
+                        if (!title) {
+                            alert ('Please fill in the account name field')
+                        } else if (!title.match(/^[BG]*[0-9]{2}[BUIN]*[0-9]{14}$/)) {
+                            alert ('Incorrect account name format')
+                        } 
+                        else {
+                           this.props.createAccount(title, balance, currency)
+                        }
                     }}
                     />
+                    
                 </div>
 
                 <div>

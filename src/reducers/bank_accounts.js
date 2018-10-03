@@ -67,7 +67,7 @@ export default (state = [], action) => {
      
     
     case GET_BANK_ACCOUNT_SUCCESS:
-      return action.payload.data;
+      return action.payload.data 
     
     case DELETE_BANK_ACCOUNT_SUCCESS:  
       return state.filter(({ id }) => id !== action.payload.data.id);

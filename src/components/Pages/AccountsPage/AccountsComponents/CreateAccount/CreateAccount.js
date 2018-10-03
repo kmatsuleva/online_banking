@@ -18,6 +18,10 @@ class CreateAccount extends React.Component {
     handleSubmit() {
       const { title, balance, currency}  = this.state;
       this.props.createAccount(title, balance, currency)
+      this.setState({
+        title: '',
+        balance: ''
+      });
   }
 
   
@@ -45,9 +49,9 @@ class CreateAccount extends React.Component {
                 </div>
 
                     <PrimaryButton
-                    value="Create"
-                    onClick={this.handleSubmit}
-                    className = "button"
+                        value="Create"
+                        onClick={this.handleSubmit}
+                        className = "button"
                     />
                 </form>
             </div>
