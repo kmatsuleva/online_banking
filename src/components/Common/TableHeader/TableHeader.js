@@ -1,11 +1,10 @@
 import React from "react";
-import PropTypes from 'prop-types';     
-import styles from "./styles"
+import PropTypes from 'prop-types'; 
 
-const TableHeader = ({ items }) => (
+const TableHeader = ({ items, className }) => (
     <tr>
         {items.map(item => {
-            return <th style={styles.column}> {item} </th>
+            return <th className={className}> {item} </th>
         })}
     </tr>
 );

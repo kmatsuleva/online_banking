@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from 'prop-types';     
 
 
-const TableData = ({ items, style }) => (
+const TableData = ({ items, className }) => (
     <tr>
         {items.map(item => {
-            return <td style={style}> {item} </td>
+            return <td className={className}> {item} </td>
         })}
     </tr>
 );

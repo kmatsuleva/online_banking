@@ -29,8 +29,6 @@ class AccountsPage extends React.Component {
                     <CreateAccount createAccount = {(title, balance, currency) => {
                         let cashBalance = parseFloat(balance);
                         let cash = cashBalance.toFixed(2);
-                        console.log(cashBalance)
-                        console.log(typeof cashBalance)
                         if (!title || !cashBalance) {
                             this.setState({ errorMessage_empty: true })
                             this.setState({ errorMessage_incorrect: false })

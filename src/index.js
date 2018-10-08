@@ -6,7 +6,8 @@ import axiosMiddleware from 'redux-axios-middleware';
 import rootReducer from './store/reducers'
 import axios from "axios";
 import { createStore, applyMiddleware } from "redux";
-import "./mocks"
+import "./mocks/accounts_mocks"
+import "./mocks/transactions_mocks"
 
 const store = createStore(
   rootReducer,

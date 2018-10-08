@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
-import TransactionsPage from "./components/Pages/TransactionsPage/TransactionsPage";
+import TransactionsPageContainer from "./containers/TransactionPageContainer"
 import OperationsPage from "./components/Pages/OperationsPage/OperationsPage"
 import LoginPage from './components/Pages/LoginPage/LoginPage';
 import AccountsPageContainer from './containers/AccountsPageContainer';
@@ -13,7 +13,7 @@ class App extends Component {
         <div>
           <Switch>
             <Route path="/login" component={LoginPage} exact />
-            <Route path="/transaction" component={TransactionsPage} />
+            <Route path="/transaction" component={TransactionsPageContainer} />
             <Route path="/accounts" component={AccountsPageContainer} />          
             <Route path="/operations" component={OperationsPage} />          
           </Switch>

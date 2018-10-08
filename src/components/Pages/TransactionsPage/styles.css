@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 50px
+}
+
+.tableWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px
+}
+
+.table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+.column {
+    padding: 12px;
+    text-transform: capitalize;
+    width: 140px;
+    border-bottom: 1px solid #ddd;
+    color: #15517d;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 19px;
+    font-weight: normal
+}
+
+
