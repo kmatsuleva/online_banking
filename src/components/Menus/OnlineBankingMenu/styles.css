@@ -4,7 +4,7 @@
         flex-direction: column;
         justify-content: center;
         padding-left: 0;
-        min-width: 200px;
+        min-width: 310px;
     }
      
     .link {
@@ -15,7 +15,7 @@
         text-decoration: none;
     }
 
-    .logo, .link {
+    .onlineMenuLogo, .link {
         display: flex;
         justify-content: center;
         padding-top: 7px;
@@ -36,23 +36,19 @@
         justify-content: center;
         padding-left: 0;
     }
-     
-    .link {
-        text-align: center;
-    }
 
-    .logo {
+    .onlineMenuLogo {
         display: flex;
         justify-content: center;
         padding-left: 5px;
-        padding: 10px 10px 10px 0;
     }
 
-    .link {
+    .link, .onlineMenuLogo {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 10px;
+        text-align: center;
     }
 
     .image {
@@ -72,11 +68,16 @@
      
     .link {
         font-size: 19px;
-        padding: 3px 23px;
+        padding: 3px 25px;
     }
 
+   .onlineMenuLogo {
+        padding: 3px 0px;
+    }
+    
     .image {
-        width: 250px
+        width: 250px;
+        padding: 5px 0;
     }
     
 }
@@ -96,6 +97,6 @@
     text-decoration: none;
 }
 
-.logo {
+.onlineMenuLogo {
     vertical-align: baseline
 }

@@ -38,7 +38,12 @@ class CreateAccount extends React.Component {
                 
                 <div className = "balance_currency">
                     <Label text="Balance:" className="label" />
-                    <input type="text" value={this.state.balance} onChange={(e) => this.setState({balance: e.target.value})}  className="input__balance" placeholder="e.g 500"/>
+                    <input type="number" 
+                            value={this.state.balance} 
+                            onChange={(e) => this.setState({balance: e.target.value})} 
+                            placeholder="e.g 500" 
+                            className="input__balance" 
+                    />
             
                     <Label text="Currency:" className="label"/>
                     <select value={this.state.currency} onChange={(e) => this.setState({currency: e.target.value})} className="dropdown">

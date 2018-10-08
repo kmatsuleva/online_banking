@@ -57,12 +57,12 @@ export default (state = [], action) => {
   switch (action.type) {
     case CREATE_BANK_ACCOUNT_SUCCESS:
       return [
-        ...state,
         {
           title: action.payload.data.title,
           balance: action.payload.data.balance,
           currency: action.payload.data.currency
-        }
+        },
+        ...state
       ];
      
     

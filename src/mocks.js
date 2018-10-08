@@ -14,13 +14,13 @@ if (process.env.NODE_ENV === 'development') {
                         {
                             id: 100,
                             title: 'BG56BUIN65431544786321',
-                            balance: 342,
+                            balance: '342.00',
                             currency: 'EUR'
                         },
                         {
                             id: 101,
                             title: 'BG56BUIN65431544786321',
-                            balance: 900,
+                            balance: '900.00',
                             currency: 'BGN'
                         }
                     ]
@@ -30,9 +30,7 @@ if (process.env.NODE_ENV === 'development') {
 
     .onPost('/accounts').reply(config => {
         const data = JSON.parse(config.data)
-        // if(data.title.match(/^[BG]*[0-9]{2}[BUIN]*[0-9]{14}$/)) {
             return [201, data];
-        // }
     })
 
     .onDelete('/accounts').reply((config) => {

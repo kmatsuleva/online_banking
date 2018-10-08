@@ -1,9 +1,11 @@
 import React from "react";
 
-const MenuItem = ({items = [], to, className}) => {
-    return  items.map(text => (
-        <li> <a href={to} className={className}> {text}</a></li>
-    ))
+const MenuItem = ({reference, className, title}) => {
+    return <li> 
+                <a href={reference} className={className}>
+                    { title }
+                </a>
+        </li>;
 }
 
 export default MenuItem;
