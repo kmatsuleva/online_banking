@@ -1,6 +1,5 @@
 import React from "react";
 import PrimaryButton from "../../../../Common/PrimaryButton/PrimaryButton"
-import Label from "../../../../Common/Label/Label";
 import "./styles.css"
 
 class CreateAccount extends React.Component {
@@ -30,34 +29,35 @@ class CreateAccount extends React.Component {
       return (
         <div>
             <div className="form">
-            <form className="createForm">
-                <div className="title">
-                    <Label text="Account:" className="label" />
-                    <input type="text" value={this.state.title} onChange={(e) => this.setState({title: e.target.value})} className="input"/>
-                </div>
+                <form className="form__createForm">
+                    <div className="createForm__title">
+                        <label className="createForm__label"> Account:  </label>
+                        <input type="text" value={this.state.title} onChange={(e) => this.setState({title: e.target.value})} className="createForm__input-text"/>
+                    </div>
+                    
+                    <div className = "balance_currency">
+                        <label className="createForm__label"> Balance: </label>
+                        <input type="number" 
+                                value={this.state.balance} 
+                                onChange={(e) => this.setState({balance: e.target.value})} 
+                                placeholder="e.g 500" 
+                                className="createForm__input-balance" 
+                        />
                 
-                <div className = "balance_currency">
-                    <Label text="Balance:" className="label" />
-                    <input type="number" 
-                            value={this.state.balance} 
-                            onChange={(e) => this.setState({balance: e.target.value})} 
-                            placeholder="e.g 500" 
-                            className="input__balance" 
-                    />
-            
-                    <Label text="Currency:" className="label"/>
-                    <select value={this.state.currency} onChange={(e) => this.setState({currency: e.target.value})} className="dropdown">
-                        <option value="BGN">BGN</option>
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                    </select>
-                </div>
+                        <label className="createForm__label"> Currency: </label>
+                        <select value={this.state.currency} onChange={(e) => this.setState({currency: e.target.value})} className="dropdown">
+                            <option value="BGN">BGN</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
 
-                    <PrimaryButton
-                        value="Create"
-                        onClick={this.handleSubmit}
-                        className = "button"
-                    />
+                    <div className = "button">
+                        <PrimaryButton
+                            value="Create"
+                            onClick={this.handleSubmit}
+                        />
+                    </div>
                 </form>
             </div>
         </div>

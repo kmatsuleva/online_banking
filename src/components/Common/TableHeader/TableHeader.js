@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 
 const TableHeader = ({ items, className }) => (
     <tr>
-        {items.map(item => {
-            return <th className={className}> {item} </th>
-        })}
+        {items.map(item => <th className={className}> {item} </th> )}
     </tr>
 );
 
 TableHeader.propTypes = {
-    items: PropTypes.node     
+    items: PropTypes.node.isRequired,
+    className: PropTypes.string
 };
 
 export default TableHeader;

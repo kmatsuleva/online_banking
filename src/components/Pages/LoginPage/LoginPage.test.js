@@ -3,7 +3,7 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
 import LoginPage from "./LoginPage"
-import LoginForm from './LoginComponents/LoginForm/LoginForm';
+import AsyncValidationForm from './LoginComponents/AsyncValidationForm/AsyncValidationForm';
 import Menu from '../../Menus/Menu/Menu';
 
 
@@ -19,9 +19,9 @@ describe("< LoginPage />", () => {
         expect(wrapper.find(Menu).length).toEqual(1);
     });
 
-    it("renders <LoginForm /> component", () => {
+    it("renders <AsyncValidationForm /> component", () => {
         const wrapper = shallow(<LoginPage />);
-        expect(wrapper.find(LoginForm).length).toEqual(1);
+        expect(wrapper.find(AsyncValidationForm).length).toEqual(1);
     });
 })
 

@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
-const ResultMessage = ({ message, className }) => {
-  return (
-    <div className={ className }> { message } </div>
-  )
-}
+const ResultMessage = ({ message, className }) => (
+  <div className={className}> {message} </div>
+);
 
 export default ResultMessage;

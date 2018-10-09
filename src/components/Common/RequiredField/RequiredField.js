@@ -1,13 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const RequiredField = ({ span }) => (
-    <span style={span}> * </span>
-);
-
-RequiredField.defaultProps = {
-    span: {
-        color: "red"
-    }
-  }
+const RequiredField = () => <span style={{ color: 'red' }}> * </span>;
 
 export default RequiredField;

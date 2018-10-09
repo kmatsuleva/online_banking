@@ -6,7 +6,7 @@ import { createAccount } from '../reducers/bank_accounts'
 import AccountsPage from "../components/Pages/AccountsPage/AccountsPage";
 
 const mapStateToProps = state => ({
-  accounts: state.accounts
+  accounts: state.accounts.accounts
 });
 
 

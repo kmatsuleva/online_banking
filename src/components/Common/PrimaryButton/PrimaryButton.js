@@ -1,36 +1,15 @@
-import React from "react";
-import PropTypes from 'prop-types';     
+import React from 'react';
+import PropTypes from 'prop-types';
+import './styles.css';
 
-const PrimaryButton = ({ value, onClick, btnStyle, disabled, className}) => (
-  <input type = "button" value = {value} onClick = {onClick} disabled={disabled} style={btnStyle} className={className}/>
+const PrimaryButton = ({ value, onClick, disabled }) => (
+	<input type="button" value={value} onClick={onClick} disabled={disabled} className="btnStyle" />
 );
 
-
 PrimaryButton.propTypes = {
-  value: PropTypes.string,
-  onClick: PropTypes.func,
-  btnStyle: PropTypes.object
-}
-
-PrimaryButton.defaultProps = {
-  btnStyle: {
-    backgroundColor: "#46568e",
-    boxShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
-    height: 40,
-    marginTop: 10,
-    borderRadius: 4,
-    paddingTop: 8,
-    paddingBottom: 8,
-    paddingLeft: 20,
-    paddingRight: 20,
-    fontSize: 16,
-    fontFamily: "Roboto, Arial, sans-serif",
-    color: "white"
-  } 
+	value: PropTypes.string.isRequired,
+	onClick: PropTypes.func,
+	disabled: PropTypes.string
 };
 
-
 export default PrimaryButton;
-
-
-

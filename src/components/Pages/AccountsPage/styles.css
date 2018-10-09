@@ -1,15 +1,16 @@
-.errorMessage_empty, .errorMessage_incorrect, .successMessage {
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
+.errorMessage_empty,
+.errorMessage_incorrect,
+.successMessage {
+	display: flex;
+	justify-content: center;
+	font-size: 19px;
 }
 
-
-.errorMessage_empty, .errorMessage_incorrect {
-    color: #bd3333;
+.errorMessage_empty,
+.errorMessage_incorrect {
+	color: #bd3333;
 }
 
 .successMessage {
-    color: green;
+	color: green;
 }
-

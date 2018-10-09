@@ -6,8 +6,8 @@ import ResultMessage from "../../Common/ResultMessage/ResultMessage"
 import "./styles.css"
 
 class AccountsPage extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
           errorMessage_empty: false,
           errorMessage_incorrect: false,
